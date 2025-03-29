@@ -8,8 +8,8 @@ O nosso projeto é sobre [...]
 Aqui está presente toda a documentação usada no período de criação e prototipação do projeto;
 
 Link para documentos:
-[Protótipo do projeto (Figma)](link)
-[Pauta das Reuniões](link)
+* [Protótipo do projeto (Figma)](link)
+* [Pauta das Reuniões](link)
 
 ## Linguagens utilizadas
 * **HTML CSS e JavaScript**
