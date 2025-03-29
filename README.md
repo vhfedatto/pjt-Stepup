@@ -10,6 +10,7 @@ Aqui está presente toda a documentação usada no período de criação e proto
 Link para documentos:
 * [Protótipo do projeto (Figma)](link)
 * [Pauta das Reuniões](link)
+* [GitHub reserva](link)
 
 ## Linguagens utilizadas
 * **HTML CSS e JavaScript**
