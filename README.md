@@ -37,5 +37,6 @@ Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
 * Alisson Rafael Marinho
 * Alexandre 
 * Rodrigo Batista de Farias
+* Leonardo Camilo de S. Filho
 * Sérgio Lucas P. Sousa
 * Guilherme dos Santos Barros
