@@ -36,7 +36,7 @@ Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
 * Victor H. Fedatto Vasconcelos
 * Kaliel A. Amblard Selhorst 
 * Alisson Rafael Marinho
-* Alexandre 
+* Alexandre B. Cavalcanti Luna
 * Rodrigo Batista de Farias
 * Leonardo Camilo de S. Filho
 * Sérgio Lucas P. Sousa
