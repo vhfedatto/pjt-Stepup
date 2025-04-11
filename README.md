@@ -23,6 +23,7 @@ Link para documentos:
 * **GitHub**
 * **Figma**
 * **Whimsical**
+* **DBeaver** (standby)
 * **MySQL** (standby)
 * **SQLite** (standby)
 
