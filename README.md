@@ -15,7 +15,7 @@ Link para documentos:
 ## Linguagens utilizadas
 * **HTML CSS e JavaScript**
 * **Python** (standby)
-* **Ruby** (standby)
+* **Java** (standby)
 * **SQL** (standby)
 
 ## Ferramentas utilizadas
