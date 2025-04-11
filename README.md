@@ -2,7 +2,7 @@
 # Projeto Personal Trainer
 
 ## Sobre o projeto
-O nosso projeto é sobre [...]
+Um site que permita que o personal organize a dieta dos alunos, veja os dados dos alunos na anamnese e nos treinos individuais, que possa organizar rotinas de treinos para seus alunos fazerem sozinhos, coleta de dados a respeito do desenvolvimento do aluno, apresentação desses dados em forma de gráficos para mostrar progressão etc. Permite também que o usuário complete a sua anamnese, coloque a sua rotina, sua alimentação, veja os treinos e anote suas observações a respeito para acompanhamento remoto por parte do personal etc. 
 
 ## Documentação
 Aqui está presente toda a documentação usada no período de criação e prototipação do projeto;
