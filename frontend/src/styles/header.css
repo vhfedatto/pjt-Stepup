@@ -25,29 +25,41 @@ body::selection{
     box-sizing: border-box;
 }
 
-
 header {
     background-color: var(--corHeader);
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #logo{
-    width: 110px;
+    width: 90px;
 }
 
-/*Configurações do Menu*/
-.menu{
-    width: 500px;
-    padding: 0px;
-    list-style: none;
-    display: flex;
-    gap: 60px;
-    font: 800 normal 20px "Inter", sans-serif;
+#perfil-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc; /* placeholder */
+    object-fit: cover;
 }
+/*Configurações do Menu*/
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    font: 800 normal 20px "Inter", sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+
 .menu > li > a{
     color: white;
     font-weight: 400;
@@ -57,4 +69,52 @@ header {
 .menu > li > a:hover{
     color: var(--color1);
     font-weight: inherit;
+    transition: 0.20s;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        text-align: center;
+        gap: 15px;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    .menu {
+        gap: 25px;
+        font-size: 16px;
+    }
+
+    .menu > li > a {
+        font-size: 16px;
+    }
+
+    #perfil-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    #logo {
+        width: 70px;
+    }
+
+    .menu {
+        gap: 15px;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .menu > li > a {
+        font-size: 14px;
+    }
+
+    #perfil-icon {
+        width: 28px;
+        height: 28px;
+    }
 }

@@ -5,11 +5,15 @@
 :root{
     --color0: #FFFFFF ;
     --color1: #FF9730;
-    --corHeader: #2C3979;
     --color2: #E0E0E0;
 
     --BarraProg: #FF9730;
     --WidgetPrincipal: #EAEEFF;
+
+    --corMacroCard:#ffffff;
+    --corMacroCardHover:#ededed;
+    --corBotao:#ffcc00;
+    --corBotaoHover:#e6b800;
 }
 
 
@@ -22,13 +26,13 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-  }
+}
 
 .resumo {
     background-color: var(--WidgetPrincipal);
@@ -66,13 +70,19 @@ body{
 }
 
 .macro-card {
-    background-color: #ffffff;
+    background-color: var(--corMacroCard);
     border-radius: 10px;
     padding: 10px;
     flex: 1;
     margin: 0 5px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     text-align: center;
+}
+
+.macro-card:hover{
+    background-color: var(--corMacroCardHover);
+    transform: scale(1.02);
+    transition: 0.20s;
 }
 
 .refeicoes {
@@ -88,7 +98,7 @@ body{
 }
 
 .add-refeicao {
-    background-color: #F9D95B;
+    background-color: var(--corBotao);
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -97,7 +107,9 @@ body{
     font-size: 20px;
 }
 .add-refeicao:hover{
-    background-color: #d7ba44;
+    background-color: var(--corBotaoHover);
+    transform: scale(1.02);
+    transition: 0.20s;
 }
 
 #add-refeicao-link{
@@ -121,14 +133,14 @@ body{
 
 .refeicao > button {
     margin-top: 10px;
-    background-color: #ffcc00;
+    background-color: var(--corBotao);
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
 }
 .add-prato:hover {
-    background-color: #e6b800;
+    background-color: var(--corBotaoHover);
 }
 
 .edit-btn{
@@ -140,6 +152,10 @@ body{
 }
 .edit-btn img{
     width: 20px;
+}
+.edit-btn:hover{
+    transform: scale(1.1);
+    transition: 0.20s;
 }
 
 .refeicao-header{

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepUp | Editar Refeição</title>
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/style-nutricao/editar.css">
+    <link rel="shortcut icon" href="../../../public/images/fav/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="../../../public/images/logo/stepup-logoPequena.png" alt="logo-site" id="logo">
+        <nav>
+            <ul class="menu">
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../nutricao.html">Nutrição</a></li>
+                <li><a href="../treinos.html">Treinos</a></li>
+                <li><a href="../help.html">Ajuda</a></li>
+            </ul>
+        </nav>
+        <img src="" alt="perfil" id="perfil-icon">
+    </header>
+
+    <main class="container">
+
+        <!--RESUMO DA REFEIÇÃO-->
+        <section class="resumo">
+            <h2 id="titulo-refeicao">Café da Manhã</h2> <!--Isso aqui tem que mudar de acordo com a refeição que o usuário for editar-->
+
+            <div class="macros">
+                <div class="macro-card" id="macro1">
+                    <img src="" alt="icone-comida-lua">
+                    <p>O café da manhã é a refeição que <strong>quebra o jejum da noite</strong>, sendo essencial para <strong>ativar</strong> o metabolismo e fornecer energia para o início do dia.</p>
+                </div>
+                <div class="macro-card" id="macro2">
+                    <img src="" alt="icone-comida-ovos-frutas">
+                    <p>Prefira alimentos ricos em <strong>carboidratos</strong> complexos, <strong>fibras</strong> e <strong>proteínas</strong> leves, como frutas, ovos, iogurte natural e aveia.</p>
+                </div>
+                <div class="macro-card" id="macro3">
+                    <img src="" alt="icone-balança-equilibrio">
+                    <p>Evite excessos de açúcar e gordura logo pela manhã - mantenha um <strong>equilíbrio</strong> que garanta disposição sem pesar o organismo.</p>
+                </div>
+            </div> <!--Fechamento do Macros-->
+        </section>
+
+
+        <!--INFORMAÇÕES DA REFEIÇÃO-->
+        <section class="banner">
+            <h2 style="text-align: center;">Informações da Refeição</h2>
+
+            <div class="infos-grid">
+                <div class="info-item horario-container">
+                    <label for="input-horario" style="margin-top: 3px;">Horário da refeição</label>
+                    <div class="input-horarios">
+                        <input type="time" id="input-horario"> <span>às</span>
+                        <input type="time" id="input-horarioFim">
+                    </div>                 
+                </div>
+
+                <div class="info-item">
+                    <label for="input-calorias">Calorias Máximas</label>
+                    <input type="number" id="input-calorias" min="0" onkeydown="return event.key !== '-' && event.key !== 'e'" placeholder="Ex: 400 kcal" style="margin-top:10px;">
+                </div>
+
+                <div class="info-item">
+                    <label for="select-dias-semana">Dias</label>
+                    <select name="dias-da-semana" id="select-dias-semana">
+                        <option value="todos-dias">Todos os dias</option>
+                        <option value="semana">Somente de seg-sex</option>
+                        <option value="fim-semana">Somente fins de semana</option>
+                        <option value="personalizar">Personalizar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="botoes-refeicao">
+                <button type="submit" id="btn-salvar">Salvar</button>
+                <button type="reset" id="btn-cancelar">Cancelar</button>
+            </div>
+        </section>
+
+        <!--SEÇÃO DO CARDÁPIO-->
+        <section class="banner">
+            <div class="refeicao-titulo">
+                <h1 id="titulo-cardapio">Seu Cardápio</h1>
+            </div>
+            
+            
+            <div class="refeicao-tabela header">
+                <div style="margin-left: 5px;">Alimento</div>
+                <div>Quantidade</div>
+                <div>Kcal</div>
+                <div>Grupo</div>
+            </div>
+            <div class="refeicao-tabela">
+                <div class="nome-alimento" style="margin-left: 5px;">Ovos de galinha assado</div>
+                <div class="qtde-alimento"><input type="number" class="input-qtdeFood" min="0" onkeydown="return event.key !== '-' && event.key !== 'e'"></div>
+                <div class="kcal-alimento">209,25 kcal</div>
+                <div class="grupo-alimento">Aves e Ovos</div>
+            </div>
+
+            <div class="refeicao-tabela">
+                <div class="nome-alimento" style="margin-left: 5px;">Pão Francês</div>
+                <div class="qtde-alimento"><input type="number" class="input-qtdeFood" min="0" onkeydown="return event.key !== '-' && event.key !== 'e'"></div>
+                <div class="kcal-alimento">428,40 kcal</div>
+                <div class="grupo-alimento">Pães</div>
+            </div>
+
+            <div class="refeicao-tabela">
+                <div class="nome-alimento" style="margin-left: 5px;">Bananas</div>
+                <div class="qtde-alimento"><input type="number" class="input-qtdeFood" min="0" onkeydown="return event.key !== '-' && event.key !== 'e'"></div>
+                <div class="kcal-alimento">69,00 kcal</div>
+                <div class="grupo-alimento">Frutas</div>
+            </div>
+        </section>
+
+
+
+        <!--ADICIONAR NOVOS ALIMENTOS-->
+        <section id="adicionar-alimentos">
+            <input type="search" placeholder="Pesquisar"> 
+            <img src="" alt="icone-lupa">
+
+            <div id="novos-alimentos">
+                <!--Resultados aparecem aqui-->
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+
+    <footer>
+        <div class="footer-topo">
+            <img src="../../../public/images/logo/stepup-logoPequena.png" alt="logo-site" id="logo-footer">
+        </div>
+        <hr>
+        
+        <div class="redes-sociais">
+            <h3>Siga-nos</h3>
+            <a href=""><img src="../../../public/images/redes-sociais/tiktok.png" alt="TikTok"></a>
+            <a href=""><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/vhfedatto/projeto-personal-trainer" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+            <a href=""><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+            <a href=""><img src="../../../public/images/redes-sociais/youtube.png" alt="YouTube"></a>
+        </div>
+        
+        <hr>
+        
+        <div class="footer-conteudo">
+            <div class="devs">
+            <h2>Devs</h2>
+                <ul>
+                    <!-- Para cada dev -->
+                    <li>
+                        <span>Alexandre Luna</span>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                    <li>
+                        <span>Alisson Rafael</span>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                    <li>
+                        <span>Guilherme Santos</span>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="#"target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="#"target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                    <li>
+                        <span>Kaliel Selhorst</span>
+                        <a href="https://github.com/Selhorstkaliel" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="https://www.instagram.com/selhorstkaliel?igsh=c3Y5YzdvZ2gwcW82" target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/in/kaliel-selhorst-3baa12350/" target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                    <li>
+                        <span>Leonardo Camilo</span>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                    <li>
+                        <span>Rodrigo Farias</span>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                    <li>
+                        <span>Sérgio Lucas</span>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                    <li>
+                        <span>Victor H Fedatto</span>
+                        <a href="https://github.com/vhfedatto" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="help">
+            <h2>Ajuda</h2>
+            <ul>
+                <li>Sobre nós</li>
+                <li>Conceito</li>
+                <li>Investidores</li>
+                <li>Fale Conosco</li>
+                <li>Contrato Personal</li>
+            </ul>
+            </div>
+        </div>
+
+        <hr>
+        <p class="copyright">&copy; 2025 Session; Site desenvolvido pela equipe [nome]. Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>
