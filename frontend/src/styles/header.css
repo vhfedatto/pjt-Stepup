@@ -4,8 +4,8 @@
 
 :root{
     --color0: #FFFFFF ;
-    --color1: #FF9730;
-    --corHeader: #2C3979;
+    --color1: white;
+    --corHeader: #d42c31;
     --color2: #E0E0E0;
 }
 
@@ -53,7 +53,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 70px;
     list-style: none;
     font: 800 normal 20px "Inter", sans-serif;
     margin: 0 auto;
@@ -61,7 +61,7 @@ header {
 }
 
 .menu > li > a{
-    color: white;
+    color: #600b30;
     font-weight: 400;
     text-decoration: none;
     font-weight: inherit;

@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StepUp | Nutrição</title>
+
+    <!--Folhas de estilo-->
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/styleNutri.css">
+    <link rel="stylesheet" href="../styles/overlay.css">
+    
+    <!--FavIcon-->
     <link rel="shortcut icon" href="../../public/images/fav/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -91,9 +96,8 @@
             </div>
             <!--Fim do Primeiro banner de alimentação-->
 
-            <a href="#" id="add-refeicao-link"><div class="add-refeicao">
-                <h3>+ Adicionar outra refeição</h3>
-              </div></a>
+            <button onclick="abrirModal()" class="add-refeicao" id="add-refeicao-link"><h3>+ Adicionar outra refeição</h3></button>
+
         </div>
     </div>
 
@@ -184,5 +188,56 @@
         <hr>
         <p class="copyright">&copy; 2025 Session; Site desenvolvido pela equipe [nome]. Todos os direitos reservados.</p>
     </footer>
+
+    <!--Criação do Overlay-->
+    <div id="modal-criar-cardapio" class="overlay hidden">
+        <div class="modal-content">
+            <button class="close-modal" onclick="fecharModal()"><img src="../../public/images/x.png" alt="fechar"></button>
+            <h2>Criar Novo Cardápio</h2>
+
+            <label for="nome-cardapio">Nome do Cardápio</label>
+            <input type="text" id="nome-cardapio" placeholder="Ex: Refeição da Segunda, Café da Manhã...">
+
+            <label for="tipo-refeicao">Tipo de Refeição</label>
+            <select id="tipo-refeicao">
+                <option value="cafe">Café da manhã</option>
+                <option value="almoco">Almoço</option>
+                <option value="jantar">Jantar</option>
+                <option value="lanche">Lanche</option>
+                <option value="personalizado">Personalizado</option>
+            </select>
+
+            <button class="btn-criar" onclick="criarCardapio()">Criar</button>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal(){
+            document.getElementById('modal-criar-cardapio').classList.remove('hidden');
+        }
+        function fecharModal(){
+            document.getElementById('modal-criar-cardapio').classList.add('hidden');
+        }
+
+        function criarCardapio(){
+            const nome = document.getElementById('nome-cardapio').value;
+            const tipo = document.getElementById('tipo-refeicao').value;
+
+            if(!nome.trim()){
+                alert('Por favor, insita um nome para o cardápio.');
+                return;
+            }
+
+            window.location.href = `nutricao-pages-childs/criar-refeicao.html?nome=${encodeURIComponent(nome)}&tipo=${tipo}`;
+        }
+
+        window.addEventListener('click', function(e){
+            const modal = document.getElementById('modal-criar-cardapio');
+            if(e.target === modal){
+                fecharModal();
+            }
+        });
+
+    </script>
 </body>
 </html>

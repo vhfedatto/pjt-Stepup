@@ -3,19 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root{
-    --color0: #FFFFFF ;
-    --color1: #FF9730;
-    --color2: #E0E0E0;
+    --BarraProg: #d42c31;
+    --WidgetPrincipal: #fab8b8;
 
-    --BarraProg: #FF9730;
-    --WidgetPrincipal: #EAEEFF;
-
-    --corMacroCard:#ffffff;
-    --corMacroCardHover:#ededed;
-    --corBotao:#ffcc00;
-    --corBotaoHover:#e6b800;
+    --corMacroCard:#ededed;
+    --corMacroCardHover:#ffffff;
+    --corBotao:#ffcc32;
+    --corBotaoHover:#eab12b;
 }
-
 
 body{
     font-family: "Inter", sans-serif;
@@ -97,7 +92,7 @@ body{
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.add-refeicao {
+.add-refeicao{
     background-color: var(--corBotao);
     padding: 15px;
     border-radius: 10px;
@@ -105,7 +100,10 @@ body{
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     text-align: center;
     font-size: 20px;
+    border: none;
+    width: 100%;
 }
+
 .add-refeicao:hover{
     background-color: var(--corBotaoHover);
     transform: scale(1.02);

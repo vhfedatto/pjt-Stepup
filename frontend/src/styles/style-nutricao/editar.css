@@ -3,17 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root{
-    --color0: #FFFFFF ;
-    --color1: #FF9730;
-    --color2: #E0E0E0;
-
-    --BarraProg: #FF9730;
     --WidgetPrincipal: #EAEEFF;
 
     --corMacroCard:#ffffff;
     --corMacroCardHover:#ededed;
-    --corBotao:#ffcc00;
-    --corBotaoHover:#e6b800;
+    --corBotao:#ff585d;
+    --corBotaoHover:#e34b50;
     --corSelection: #ff373d;
 }
 
@@ -56,6 +51,11 @@ body{
     text-align: center;
 }
 
+.macro-card img{
+    width: 65px;
+    margin: 20px 0 20px 0;
+}
+
 #macro1{
     margin-left: 0px;
 }
@@ -84,8 +84,6 @@ body{
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.banner
-
 .nome-alimento, .kcal-alimento, .grupo-alimento{
     margin: auto 0px auto 0px;
 }
@@ -113,7 +111,7 @@ body{
     border-radius: 4px;
     font-size: 12px;
 }
-.input-qtdeFood:focus{
+.input-qtdeFood, #barra-pesquisa, #input-horario, #input-horarioFim, :focus{
     outline-color: var(--corSelection);
 }
 
@@ -198,7 +196,7 @@ body{
 }
 
 #btn-salvar,
-#btn-cancelar {
+#btn-cancelar{
     padding: 10px 16px;
     border: none;
     border-radius: 8px;
@@ -229,15 +227,35 @@ body{
     display: flex;
     align-items: center;
     margin-top: 30px;
-    gap: 10px;
 }
 
 #adicionar-alimentos input[type="search"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
+}
+
+#barra-pesquisa{
+    margin-right: 15px;
+}
+
+#btn-search{
+    background-color: var(--corBotao);
+    padding: 4px;
+    width: 70px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#btn-search:hover{
+    background-color: var(--corBotaoHover);
+    transition: 0.20s;
+}
+
+#btn-search > img{
+    width: 32px;
 }
 
 /* Responsividade */
@@ -246,4 +264,16 @@ body{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
     }
+}
+
+.add-prato{
+    margin-top: 10px;
+    background-color: var(--corBotao);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-prato:hover {
+    background-color: var(--corBotaoHover);
 }

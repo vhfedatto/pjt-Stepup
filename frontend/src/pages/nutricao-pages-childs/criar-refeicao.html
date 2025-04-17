@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StepUp | Editar Refeição</title>
+    <title>StepUp | Criar Refeição</title>
 
     <!--Folhas de estilo-->
     <link rel="stylesheet" href="../../styles/footer.css">
@@ -35,15 +35,15 @@
 
             <div class="macros">
                 <div class="macro-card" id="macro1">
-                    <img src="" alt="icone-comida-lua">
+                    <img src="../../../public/images/cafe1.png" alt="icone 01">
                     <p>O café da manhã é a refeição que <strong>quebra o jejum da noite</strong>, sendo essencial para <strong>ativar</strong> o metabolismo e fornecer energia para o início do dia.</p>
                 </div>
                 <div class="macro-card" id="macro2">
-                    <img src="" alt="icone-comida-ovos-frutas">
+                    <img src="../../../public/images/cafe2.png" alt="icone 02">
                     <p>Prefira alimentos ricos em <strong>carboidratos</strong> complexos, <strong>fibras</strong> e <strong>proteínas</strong> leves, como frutas, ovos, iogurte natural e aveia.</p>
                 </div>
                 <div class="macro-card" id="macro3">
-                    <img src="" alt="icone-balança-equilibrio">
+                    <img src="../../../public/images/cafe3.png" alt="icone 03">
                     <p>Evite excessos de açúcar e gordura logo pela manhã - mantenha um <strong>equilíbrio</strong> que garanta disposição sem pesar o organismo.</p>
                 </div>
             </div> <!--Fechamento do Macros-->
@@ -98,27 +98,12 @@
                 <div>Kcal</div>
                 <div>Grupo</div>
             </div>
-            <div class="refeicao-tabela">
-                <div class="nome-alimento" style="margin-left: 5px;">Ovos de galinha assado</div>
-                <div class="qtde-alimento"><input type="number" class="input-qtdeFood" min="0" onkeydown="return event.key !== '-' && event.key !== 'e'"></div>
-                <div class="kcal-alimento">209,25 kcal</div>
-                <div class="grupo-alimento">Aves e Ovos</div>
-            </div>
 
             <div class="refeicao-tabela">
-                <div class="nome-alimento" style="margin-left: 5px;">Pão Francês</div>
-                <div class="qtde-alimento"><input type="number" class="input-qtdeFood" min="0" onkeydown="return event.key !== '-' && event.key !== 'e'"></div>
-                <div class="kcal-alimento">428,40 kcal</div>
-                <div class="grupo-alimento">Pães</div>
-            </div>
-
-            <div class="refeicao-tabela">
-                <div class="nome-alimento" style="margin-left: 5px;">Bananas</div>
-                <div class="qtde-alimento"><input type="number" class="input-qtdeFood" min="0" onkeydown="return event.key !== '-' && event.key !== 'e'"></div>
-                <div class="kcal-alimento">69,00 kcal</div>
-                <div class="grupo-alimento">Frutas</div>
+                <p style="color: #808080; font-style: italic;">Adicione algum prato e ele aparecerá aqui</p>
             </div>
         </section>
+
 
         <!--ADICIONAR NOVOS ALIMENTOS-->
         <section id="adicionar-alimentos">
@@ -221,5 +206,113 @@
         <p class="copyright">&copy; 2025 Session; Site desenvolvido pela equipe [nome]. Todos os direitos reservados.</p>
     </footer>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const params = new URLSearchParams(window.location.search);
+            const nome = params.get("nome") || "Sua Refeição";
+            const tipo = params.get("tipo") || "padrão";
+
+            document.getElementById("titulo-cardapio").textContent = `Seu cardápio de "${nome}"`;
+
+            if(tipo == "cafe"){
+                document.getElementById("titulo-refeicao").textContent = "Café da manhã";
+
+            }else if(tipo == "almoco"){
+                document.getElementById("titulo-refeicao").textContent = "Almoço";
+
+            }else if(tipo == "jantar"){
+                document.getElementById("titulo-refeicao").textContent = "Jantar";
+
+            }else if(tipo == "lanche"){
+                document.getElementById("titulo-refeicao").textContent = "Lanche";
+
+            }else if(tipo == "personalizado"){
+                document.getElementById("titulo-refeicao").textContent = "";
+            }
+
+            
+
+            const cards = {
+                cafe: [
+                    {
+                        img: "../../../public/images/cafe1.png",
+                        texto: "O café da manhã é a refeição que <strong>quebra o jejum da noite</strong>, sendo essencial para <strong>ativar</strong> o metabolismo e fornecer energia para o início do dia."
+                    },
+                    {
+                        img: "../../../public/images/cafe2.png",
+                        texto: "Prefira alimentos ricos em <strong>carboidratos</strong> complexos, <strong>fibras</strong> e <strong>proteínas</strong> leves, como frutas, ovos, iogurte natural e aveia."
+                    },
+                    {
+                        img: "../../../public/images/cafe3.png",
+                        texto: "Evite excessos de açúcar e gordura logo pela manhã - mantenha um <strong>equilíbrio</strong> que garanta disposição sem pesar o organismo."
+                    },
+                ],
+                almoco: [
+                    {
+                        img: "../../../public/images/almoco1.png",
+                        texto: "O almoço é a principal fonte de energia do dia, essencial para o <strong>funcionamento do corpo</strong>."
+                    },
+                    {
+                        img: "../../../public/images/almoco2.png",
+                        texto: "Capriche em <strong>proteínas magras</strong>, vegetais e carboidratos complexos como arroz integral."
+                    },
+                    {
+                        img: "../../../public/images/almoco3.png",
+                        texto: "Evite refeições muito pesadas ou gordurosas que causem sonolência à tarde."
+                    },
+                ],
+                jantar:[
+                    {
+                        img: "jantar1.png",
+                        texto: "O jantar deve ser <strong>leve</strong> e nutritivo, pois antecede o descanso noturno."
+                    },
+                    {
+                        img: "jantar2.png",
+                        texto: "Evite frituras e opte por <strong>sopas, saladas ou omeletes</strong>."
+                    },
+                    {
+                        img: "jantar3.png",
+                        texto: "Alimentos pesados à noite podem atrapalhar o <strong>sono</strong> e a digestão."
+                    },
+                ],
+                lanche:[
+                    {
+                        img: "lanche1.png",
+                        texto: "Lanches devem ser estratégicos para manter a energia <strong>entre as refeições principais</strong>."
+                    },
+                    {
+                        img: "lanche2.png",
+                        texto: "Inclua oleaginosas, frutas ou iogurtes para garantir <strong>saciedade</strong>."
+                    },
+                    {
+                        img: "lanche3.png",
+                        texto: "Evite processados como bolachas recheadas e refrigerantes."
+                    },  
+                ],
+                padrao:[
+                    {
+                        img: "defalut1.png",
+                        texto: "Personalize essa refeição como preferir!"
+                    },
+                    {
+                        img: "defalut2.png",
+                        texto: "Adicione itens nutritivos para compor um cardápio saudável."
+                    },
+                    {
+                        img: "defalut3.png",
+                        texto: "Organize os alimentos e horários conforme seu estilo de vida."
+                    },
+                ]
+            };
+
+            const refeicaoCards = cards[tipo] || cards.padrao;
+
+            for(let i = 0; i < 3; i++){
+                const card = refeicaoCards[i];
+                document.querySelector(`#macro${i+1} img`).src = `../../public/images/${card.img}`;
+                document.querySelector(`#macro${i + 1} p`).innerHTML = card.texto;
+            }
+        });
+    </script>
 </body>
 </html>
