@@ -7,6 +7,7 @@
     --color1: white;
     --corHeader: #d42c31;
     --color2: #E0E0E0;
+    --textoHeader: #600b30;
 }
 
 body{
@@ -61,7 +62,7 @@ header {
 }
 
 .menu > li > a{
-    color: #600b30;
+    color: var(--textoHeader);
     font-weight: 400;
     text-decoration: none;
     font-weight: inherit;

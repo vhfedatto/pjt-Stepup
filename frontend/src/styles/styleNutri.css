@@ -8,8 +8,11 @@
 
     --corMacroCard:#ededed;
     --corMacroCardHover:#ffffff;
-    --corBotao:#ffcc32;
-    --corBotaoHover:#eab12b;
+    --corBotao:#a36bb6; /*O amarelo: #ffcc32*/
+    --corBotaoHover:#925ba5; /*O amarelo escuro: #eab12b*/
+
+    --corBordaCheck: #c1a6ce;
+    --corCheck: #f3c7fc;
 }
 
 body{
@@ -108,6 +111,7 @@ body{
     background-color: var(--corBotaoHover);
     transform: scale(1.02);
     transition: 0.20s;
+    cursor: pointer;
 }
 
 #add-refeicao-link{
@@ -183,6 +187,49 @@ body{
 }
 .refeicao-tabela.header:hover{
     background-color: #ffffff;
+}
+
+.status-alimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.status-alimento > input[type = "checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.status-alimento input[type="checkbox"]:checked {
+    background-color: var(--corBotao);
+    border-color: var(--corBordaCheck);
+}
+
+.status-alimento input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: 4px;
+    width: 4px;
+    height: 7px;
+    border: solid var(--corCheck);
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.status-alimento input[type="checkbox"]:checked::after {
+    opacity: 1;
 }
 
 @media(max-width: 600px){
