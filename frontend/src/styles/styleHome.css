@@ -1,41 +1,293 @@
 @charset "UTF-8";
 
-/*Configurações da página principal*/
-#dayS{
-    background-color: var(--color1);
-    width: 125px;
-    height: 59px;
-    border-radius: 14px;
-}
-#dayS img{
-    width: 45px;
-}
-#dayS h2{
-    display: inline;
-    color: #FFFFFF;
+:root{
+    --corFundo1: #E6E6E6;
+    --corBranco: #ffffff;
+
+    --corBotao: #EA526F;
+    --corBotaoHover: #c9445c;
+
+    --corCardTreino: #FFE6BE;
+    --corBolasWidget: #A8A4BA;
 }
 
-#resumo{
-    width: 362px;
-    height: 267px;
-    border-radius: 20px;
-    background-color: #FFE3C8;
+.container-cinza {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px 50px 20px 50px;
+    background-color: var(--corFundo1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.219);
+    box-sizing: border-box;
 }
-#meta{
-    width: 362px;
-    height: 267px;
-    border-radius: 20px;
-    background-color: #B6E4AA;
+
+#streaks {
+    background-color: var(--corBranco);
+    border-radius: 15px;
+    height: 100px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
-#widgets{
-    width: 756px;
-    height: 267px;
-    border-radius: 20px;
-    background-color: var(--color2);
+
+.streak-day {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 5px; 
 }
-#peso{
-    width: 756px;
-    height: 267px;
-    border-radius: 20px;
-    background-color: var(--color2);
-} 
+
+.day-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.day-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 7px solid var(--corBolasWidget); 
+}
+
+.day-circle.completed {
+    background-color: #fdd087; 
+    border: 7px solid #FFB74D; 
+}
+
+.day-circle.current {
+    border: 7px solid var(--corBotao); 
+}
+
+.widgets{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#widCardapio{
+    background-color: var(--corBranco);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#widResumo{
+    background-color: var(--corBranco);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%px;
+    box-sizing: border-box;
+}
+
+#widCardapio > h3, #widResumo > h3{
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.refeicao-tabela{
+    display: grid;
+    grid-template-columns: 2fr 1fr 50px;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    align-items: center;
+    cursor: default;
+}
+
+.nome-alimento, .qtde.alimento, .status-alimento{
+    display: flex;
+    align-items: center;
+}
+
+.status-alimento{
+    justify-content: flex-end;
+    margin-right: 2px;
+}
+
+/* Botões estilizados */
+#btn-cardapio{
+    background-color: var(--corBotao);
+    color: var(--corBranco);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: auto;
+    cursor: pointer;
+}
+#btn-cardapio:hover{
+    background-color: var(--corBotaoHover);
+}
+
+/* Barras de progresso */
+.progress-container{
+    margin: 15px 0;
+}
+.progress-container label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 20px;
+    background-color: var(--corBolasWidget);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill{
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-fill.calorias{
+    background-color: var(--corBotao);
+}
+.progress-fill.movimento{
+    background-color: #FFB74D;
+}
+.progress-fill.agua{
+    background-color: #42A5F5;
+}
+
+/* PARTE BRANCA */
+.container-branco h2{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+.container-branco {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 50px 20px 50px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+#carrossel-treinos{
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.carousel-track{
+    display: flex;
+    gap: 20px;
+    scroll-snap-type: mandatory;
+    user-select: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+/* ISSO AQUI FICA PARA ANÁLISE POSTERIOR
+#carrossel-treinos{
+    overflow-x: auto;
+    cursor: grab;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+}
+
+.carousel-track.dragging {
+    cursor: grabbing;
+}
+
+.carousel-track{
+   display: flex;
+   gap: 20px;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
+   padding: 10px 0;
+   user-select: none;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+}
+*/
+
+.carousel-track::-webkit-scrollbar{
+    display: none;
+}
+
+.task-card {
+    flex: 0 0 auto;
+    width: 220px;
+    background-color: #ffe3b3;
+    border-radius: 15px;
+    padding: 1rem;
+    scroll-snap-align: start;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+  
+.task-card .icone img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+  
+.task-card h3 {
+    margin: 0.8rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+  
+.btn-feito {
+    background-color: #ef476f;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.btn-feito:hover {
+    background-color: var(--corBotaoHover);
+    
+}
+
+
+
+
+
+/* Responsividade */
+@media(max-width: 768px){
+    .container-cinza, .container-branco{
+        padding: 20px 20px 20px 20px; 
+    }
+
+    .widgets{
+        grid-template-columns: 1fr;
+    }
+    #widCardapio, #widResumo{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .treino-card {
+        flex: 0 0 200px;
+    }
+}

@@ -9,7 +9,7 @@ Aqui está presente toda a documentação usada no período de criação e proto
 
 Link para documentos:
 * [Protótipo do projeto (Figma)](link)
-* [Pauta das Reuniões](link)
+* [Pauta das Reuniões](link:https://docs.google.com/document/d/1F49GvXPe3H1Fvt7dav2vAmuUGqfxqGjNbTsizmRtGIw/edit?usp=sharing)
 * [GitHub reserva](link)
 
 ## Linguagens utilizadas

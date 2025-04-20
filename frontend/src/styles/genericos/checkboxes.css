@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+:root{
+    --corCheckboxHover: #925ba5;
+    --corBordaCheck: #c1a6ce;
+    --corCheck: #f3c7fc;
+}
+
+.status-alimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.status-alimento > input[type = "checkbox"]{
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.status-alimento input[type="checkbox"]:checked {
+    background-color: var(--corCheckboxHover);
+    border-color: var(--corBordaCheck);
+}
+
+.status-alimento input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: 4px;
+    width: 4px;
+    height: 7px;
+    border: solid var(--corCheck);
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.status-alimento input[type="checkbox"]:checked::after {
+    opacity: 1;
+}

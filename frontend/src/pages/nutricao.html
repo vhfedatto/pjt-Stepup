@@ -6,8 +6,9 @@
     <title>StepUp | Nutrição</title>
 
     <!--Folhas de estilo-->
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/genericos/footer.css">
+    <link rel="stylesheet" href="../styles/genericos/header.css">
+    <link rel="stylesheet" href="../styles/genericos/checkboxes.css">
     <link rel="stylesheet" href="../styles/styleNutri.css">
     <link rel="stylesheet" href="../styles/overlay.css">
     
@@ -92,7 +93,7 @@
                     <div class="grupo-alimento">Frutas</div>
                     <div class="status-alimento"><input type="checkbox"></div>
                 </div>
-                <button class="add-prato">+ Adicionar alimento</button>
+                <button class="add-prato" id="add-prato">+ Adicionar alimento</button>
             </div>
             <!--Fim do Primeiro banner de alimentação-->
 
@@ -136,7 +137,7 @@
                     </li>
                     <li>
                         <span>Guilherme Santos</span>
-                        <a href="#" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="https://github.com/GuilhermeSBS10" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
                         <a href="#"target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
                         <a href="#"target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
                     </li>
@@ -211,91 +212,13 @@
         </div>
     </div>
 
+
+    <script src="../assets/scripts/nutri-overlay.js"></script>
+    <script src="../assets/scripts/barra-progresso.js"></script>
     <script>
-        function abrirModal(){
-            document.getElementById('modal-criar-cardapio').classList.remove('hidden');
-        }
-        function fecharModal(){
-            document.getElementById('modal-criar-cardapio').classList.add('hidden');
-        }
-
-        function criarCardapio(){
-            const nome = document.getElementById('nome-cardapio').value;
-            const tipo = document.getElementById('tipo-refeicao').value;
-
-            if(!nome.trim()){
-                alert('Por favor, insita um nome para o cardápio.');
-                return;
-            }
-
-            window.location.href = `nutricao-pages-childs/criar-refeicao.html?nome=${encodeURIComponent(nome)}&tipo=${tipo}`;
-        }
-
-        window.addEventListener('click', function(e){
-            const modal = document.getElementById('modal-criar-cardapio');
-            if(e.target === modal){
-                fecharModal();
-            }
+        document.getElementById('add-prato').addEventListener('click', function(){
+            window.location.href = 'nutricao-pages-childs/editar-refeicao.html';
         });
-
-        //Script para a barra de progresso:
-
-        document.addEventListener("DOMContentLoaded", () => {
-        const barra = document.querySelector('.barra-progresso span');
-        const resumoText = document.querySelector(".resumo p");
-        const macroCalorias = document.querySelectorAll('.macro-card strong')[0];
-
-        let meta = 2000; // meta calórica diária - deve ser alterada
-
-        barra.style.transition = "width 0.4s ease-in-out";
-
-        function atualizarResumo(){
-            const checkboxes = document.querySelectorAll('.status-alimento input[type = "checkbox"]');
-            let totalKcalConsumidas = 0;
-
-            checkboxes.forEach((checkbox) =>{
-                if(checkbox.checked){
-                    const linha = checkbox.closest('.refeicao-tabela');
-                    const kcalTexto = linha.querySelector('.kcal-alimento').textContent;
-                    const kcal = parseFloat(kcalTexto.replace(',','.'));
-                    totalKcalConsumidas += kcal;
-                }
-            });
-
-            let percentual = Math.min((totalKcalConsumidas/meta)*100, 100);
-            barra.style.width = percentual + "%";
-
-            resumoText.innerHTML = `Calorias Consumidas <strong>${totalKcalConsumidas.toFixed(0)} kcal</strong> / Meta <strong>${meta} kcal</strong>`;
-
-            if(macroCalorias){
-                macroCalorias.textContent = `${totalKcalConsumidas.toFixed(0)} kcal`;
-            }
-        }
-
-
-        // Ativa eventos de todos os checkboxes visíveis
-        function ativarListenersCheckboxes() {
-            const checkboxes = document.querySelectorAll('.status-alimento input[type = "checkbox"]');
-            checkboxes.forEach(cb => {
-                cb.removeEventListener('change', atualizarResumo); 
-                cb.addEventListener('change', atualizarResumo);
-            });
-        }
-        ativarListenersCheckboxes();
-        atualizarResumo();
-
-    // Caso novas refeições sejam adicionadas dinamicamente
-    const observer = new MutationObserver(() => {
-        ativarListenersCheckboxes();
-        atualizarResumo();
-    });
-
-    // Observa mudanças em todas as refeições
-    observer.observe(document.querySelector('.refeicoes'), {
-        childList: true,
-        subtree: true,
-    });
-});
     </script>
 </body>
 </html>

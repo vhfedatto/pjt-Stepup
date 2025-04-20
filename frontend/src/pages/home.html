@@ -7,8 +7,9 @@
 
     <!--Folhas de estilo-->
     <link rel="stylesheet" href="../styles/styleHome.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/genericos/footer.css">
+    <link rel="stylesheet" href="../styles/genericos/header.css">
+    <link rel="stylesheet" href="../styles/genericos/checkboxes.css">
 
     <!--FavIcon-->
     <link rel="shortcut icon" href="../../public/images/fav/favicon.ico" type="image/x-icon">
@@ -30,22 +31,142 @@
     </header>
 
     <main>
-        <h2 id="boas-vindas">[aqui aparecerá uma mensagem de bom dia/tarde/noite]</h2>
+        <div class="container-cinza">
+            <div id="streaks">
+                
+                <div class="streak-day">
+                    <h3 class="day-tittle">S</h3>
+                    <div class="day-circle completed"></div>
+                </div>
+                <div class="streak-day">
+                    <h3 class="day-tittle">T</h3>
+                    <div class="day-circle completed"></div>
+                </div>
+                <div class="streak-day">
+                    <h3 class="day-tittle">Q</h3>
+                    <div class="day-circle current"></div>
+                </div>
+                <div class="streak-day">
+                    <h3 class="day-tittle">Q</h3>
+                    <div class="day-circle"></div>
+                </div>
+                <div class="streak-day">
+                    <h3 class="day-tittle">S</h3>
+                    <div class="day-circle"></div>
+                </div>
+                <div class="streak-day">
+                    <h3 class="day-tittle">S</h3>
+                    <div class="day-circle"></div>
+                </div>
+                <div class="streak-day">
+                    <h3 class="day-tittle">D</h3>
+                    <div class="day-circle"></div>
+                </div>
+            </div>
 
-        <div id="treino-dia">
-
+            <div class="widgets">
+                <div id="widCardapio">
+                    <h3>Café da Manhã</h3>
+                    <div class="refeicao-tabela">
+                        <div class="nome-alimento">Ovos de galinha assados</div>
+                        <div class="qtde-alimento">3 uni.</div>
+                        <div class="status-alimento"><input type="checkbox"></div>
+                    </div>
+                    <div class="refeicao-tabela">
+                        <div class="nome-alimento">Pão Francês</div>
+                        <div class="qtde-alimento">3 uni.</div>
+                        <div class="status-alimento"><input type="checkbox"></div>
+                    </div>
+                    <div class="refeicao-tabela">
+                        <div class="nome-alimento">Bananas</div>
+                        <div class="qtde-alimento">75g</div>
+                        <div class="status-alimento"><input type="checkbox"></div>
+                    </div>
+                    <!--
+                    <div class="agua">
+                        <div class="nome-agua">Água</div>
+                        <div class="qtde-agua">2L/dia</div>
+                        <button class="btn-agua">Beber água +180ml</button>
+                    </div>-->
+                    <button id="btn-cardapio" onclick="verCardapio()">Ver cardápio</button>
+                </div>
+                <div id="widResumo">
+                    <h3>Resumo do Dia:</h3>
+                    <div class="progress-container">
+                        <label>Calorias</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill calorias" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <label>Movimento</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill movimento" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <label>Consumo de água</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill agua" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="cardapio-dia"> <!-- A depender do horário de acesso, o cardapio aparecerá -->
+        <div class="container-branco">
+            <div id="aba-treino">
+                <h2>Seus Treinos de Hoje</h2> 
+            </div>
+            
+            <div id="carrossel-treinos">
+                <div class="carousel-track">
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/bicep-curl-200.png" alt=""></div>
+                        <h3>Rosca direta</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/shoulder-press-200.png" alt=""></div>
+                        <h3>Desenvolvimento com barra</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/leg-extension-200.png" alt=""></div>
+                        <h3>Extensão de pernas</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/barbell-squat-200.png" alt=""></div>
+                        <h3>Agachamento com barra</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
 
-        </div>
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/bench-dips.png" alt=""></div>
+                        <h3>Tríceps Banco</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
 
-        <div id="agua">
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/hip-thrust.png" alt=""></div>
+                        <h3>Elevação de quadril</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
 
-        </div>
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/barbell-front-squat.png" alt=""></div>
+                        <h3>Barbell Front Squat</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
 
-        <div id="streaks">
-
+                    <div class="task-card">
+                        <div class="icone"><img src="../assets/icones-treinos/dumbbell-lunge.png" alt=""></div>
+                        <h3>Avanço com Halteres</h3>
+                        <button class="btn-feito">Feito</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -85,7 +206,7 @@
                     </li>
                     <li>
                         <span>Guilherme Santos</span>
-                        <a href="#" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                        <a href="https://github.com/GuilhermeSBS10" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
                         <a href="#"target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
                         <a href="#"target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
                     </li>
@@ -136,7 +257,14 @@
         </div>
 
         <hr>
-        <p class="copyright">&copy; 2025 Session; Site desenvolvido pela equipe [nome]. Todos os direitos reservados.</p>
+        <p class="copyright">&copy; 2025 StepUp; Site desenvolvido pela equipe [nome]. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="../assets/scripts/scroll-carousel.js"></script>
+    <script>
+        function verCardapio(){
+            window.location.href = 'nutricao.html';
+        }
+    </script>
 </body>
 </html>
