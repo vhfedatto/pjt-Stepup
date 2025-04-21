@@ -135,6 +135,7 @@ body{
 }
 
 .refeicao > button {
+    color: black;
     margin-top: 10px;
     background-color: var(--corBotao);
     border: none;
@@ -142,6 +143,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
+
 .add-prato:hover {
     background-color: var(--corBotaoHover);
 }
