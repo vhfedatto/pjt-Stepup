@@ -12,7 +12,7 @@ body{
 }
 
 main{
-    max-width: 1600px;
+    max-width: 1200px;
     margin: auto;
     box-sizing: border-box;
 }
@@ -60,6 +60,7 @@ h1{
 .faq-header img {
     width: 20px;
     transition: transform 0.3s;
+    user-select: none;
 }
 
 .faq-header img.rotate {
@@ -77,4 +78,8 @@ h1{
     padding: 1rem 0;
     margin-bottom: 20px;
     font-size: 16px;
+}
+
+.faq-section:last-child{
+    margin-bottom: 35px;
 }
