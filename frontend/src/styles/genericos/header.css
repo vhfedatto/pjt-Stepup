@@ -77,3 +77,50 @@ header {
     font-weight: inherit;
     transition: 0.20s;
 }
+
+
+@media (max-width: 600px) {
+    header {
+        text-align: center;
+        gap: 15px;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    .menu {
+        gap: 25px;
+        font-size: 16px;
+    }
+
+    .menu > li > a {
+        font-size: 16px;
+    }
+
+    #perfil-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    #logo {
+        width: 70px;
+    }
+
+    .menu {
+        gap: 15px;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .menu > li > a {
+        font-size: 14px;
+    }
+
+    #perfil-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
