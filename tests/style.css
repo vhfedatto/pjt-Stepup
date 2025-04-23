@@ -1,20 +1,16 @@
-@charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-:root{
-    --color0: #FFFFFF ;
+:root {
+    --color0: #FFFFFF;
     --color1: white;
     --corHeader: #d42c31;
     --color2: #E0E0E0;
     --textoHeader: #600b30;
 }
 
-body{
+body {
     font-family: "Inter", sans-serif;
 }
 
-body::selection{
+body::selection {
     background-color: #0a277f;
     color: #ffffff;
     border-radius: 2px;
@@ -26,6 +22,7 @@ body::selection{
     box-sizing: border-box;
 }
 
+/* HEADER */
 header {
     background-color: var(--corHeader);
     color: white;
@@ -34,46 +31,60 @@ header {
     justify-content: space-between;
     padding: 15px 20px;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
-#logo{
+#logo {
     width: clamp(3rem, 10vw, 5.6rem);
+    flex-shrink: 0;
 }
 
-#perfil-icon{
-    text-decoration: none;
-}
-
-#perfil-icon img{
-    width: clamp(2rem, 6vw, 3.5rem);
+#perfil-icon {
+    width: clamp(30px, 6vw, 40px);
+    height: clamp(30px, 6vw, 40px);
     border-radius: 50%;
-    background-color: #ccc; /* placeholder */
+    background-color: #ccc;
     object-fit: cover;
-    vertical-align: middle;
 }
-/*Configurações do Menu*/
+
+/* MENU */
 .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: clamp(0.9rem, 3.5vw, 8.6rem);
+    gap: clamp(0.5rem, 4vw, 6rem);
     list-style: none;
-    font: 800 normal 20px "Inter", sans-serif;
-    margin: 0 auto;
+    font: 800 1.25rem "Inter", sans-serif;
     padding: 0;
+    margin: 0 auto;
 }
 
-.menu > li > a{
+.menu > li > a {
     color: var(--textoHeader);
-    font-weight: 400;
+    font-weight: inherit;
     text-decoration: none;
-    font-weight: inherit;
-    font-size: clamp(0.8rem, 2.8vw, 1.25rem);
+    font-size: clamp(0.85rem, 1.5vw, 1.25rem);
 }
-.menu > li > a:hover{
+
+.menu > li > a:hover {
     color: var(--color1);
-    font-weight: inherit;
-    transition: 0.20s;
+    transition: 0.2s ease;
+}
+
+/* AJUSTE FINAIS PARA MOBILE */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu {
+        gap: clamp(0.4rem, 2.5vw, 1.5rem);
+    }
+
+    .menu > li {
+        margin-bottom: 4px;
+    }
 }
