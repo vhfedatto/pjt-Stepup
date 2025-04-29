@@ -114,8 +114,16 @@ header {
     }
   }
 
-  /* HEADER RESPONSIVO */
+/* HEADER RESPONSIVO */
 .mobile-header {
+  display: none;
+}
+.menu-lateral{
+  display: none;
+}
+
+@media(max-width: 400px){
+  .mobile-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -130,18 +138,18 @@ header {
     color: var(--color1);
     cursor: pointer;
   }
-  
+
   #logo {
     width: clamp(3rem, 8vw, 5.5rem);
   }
-  
+
   #perfil-icon img {
     width: clamp(2rem, 6vw, 3.5rem);
     border-radius: 50%;
     background-color: #ccc;
     object-fit: cover;
   }
-  
+
   /* MENU LATERAL */
   .menu-lateral {
     position: fixed;
@@ -155,24 +163,24 @@ header {
     transition: left 0.3s ease;
     z-index: 1001;
   }
-  
+
   .menu-lateral ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .menu-lateral li {
     margin-bottom: 1.2rem;
   }
-  
+
   .menu-lateral a {
     color: var(--color1);
     font-size: 1.2rem;
     text-decoration: none;
     font-weight: bold;
   }
-  
+
   /* Overlay */
   .overlay {
     position: fixed;
@@ -184,5 +192,6 @@ header {
     z-index: 1000;
     display: none;
   }
+}
 
   

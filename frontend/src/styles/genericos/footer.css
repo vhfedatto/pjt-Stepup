@@ -15,7 +15,7 @@ footer {
 }
 
 #logo-footer {
-    width: 100px;
+    width: clamp(4rem, 11.5vw, 6rem);
     margin: auto;
 }
 
