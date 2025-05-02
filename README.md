@@ -10,8 +10,9 @@ Aqui está presente toda a documentação usada no período de criação e proto
 Link para documentos:
 * [Protótipo do projeto (Figma)](https://www.figma.com/design/bs8p2QMqXPp1NTgfhgqqvp/Treinos?node-id=0-1&t=r8JfHXLopqK2iYNt-1)
 * [Pauta das Reuniões](https://docs.google.com/document/d/1F49GvXPe3H1Fvt7dav2vAmuUGqfxqGjNbTsizmRtGIw/edit?usp=sharing)
-* [GitHub reserva](link)
 * [Whimsical da Equipe](https://whimsical.com/projeto-site-de-treinos-4uqUocoXzs6EdKcYRYQTvx)
+* [GitHub reserva](link)
+
 
 ## Linguagens utilizadas
 * **HTML CSS e JavaScript**
