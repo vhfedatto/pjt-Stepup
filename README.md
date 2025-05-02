@@ -11,7 +11,7 @@ Link para documentos:
 * [Protótipo do projeto (Figma)](link)
 * [Pauta das Reuniões](link:https://docs.google.com/document/d/1F49GvXPe3H1Fvt7dav2vAmuUGqfxqGjNbTsizmRtGIw/edit?usp=sharing)
 * [GitHub reserva](link)
-* [Whimsical] (link: https://whimsical.com/projeto-site-de-treinos-4uqUocoXzs6EdKcYRYQTvx)
+* [Whimsical](link:https://whimsical.com/projeto-site-de-treinos-4uqUocoXzs6EdKcYRYQTvx)
 
 ## Linguagens utilizadas
 * **HTML CSS e JavaScript**
