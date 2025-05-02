@@ -8,10 +8,10 @@ Um site que permita que o personal organize a dieta dos alunos, veja os dados do
 Aqui está presente toda a documentação usada no período de criação e prototipação do projeto;
 
 Link para documentos:
-* [Protótipo do projeto (Figma)](link)
+* [Protótipo do projeto (Figma)](https://www.figma.com/design/bs8p2QMqXPp1NTgfhgqqvp/Treinos?node-id=0-1&t=r8JfHXLopqK2iYNt-1)
 * [Pauta das Reuniões](https://docs.google.com/document/d/1F49GvXPe3H1Fvt7dav2vAmuUGqfxqGjNbTsizmRtGIw/edit?usp=sharing)
 * [GitHub reserva](link)
-* [Whimsical](https://whimsical.com/projeto-site-de-treinos-4uqUocoXzs6EdKcYRYQTvx)
+* [Whimsical da Equipe](https://whimsical.com/projeto-site-de-treinos-4uqUocoXzs6EdKcYRYQTvx)
 
 ## Linguagens utilizadas
 * **HTML CSS e JavaScript**
@@ -26,7 +26,6 @@ Link para documentos:
 * **Whimsical**
 * **DBeaver** (standby)
 * **MySQL** (standby)
-* **SQLite** (standby)
 
 ## Instalação do projeto
 Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
