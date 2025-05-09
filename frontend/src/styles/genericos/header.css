@@ -85,7 +85,7 @@ header {
     border: none;
     color: var(--color1);
     cursor: pointer;
-  }
+}
   
 @media (max-width: 400px) {
     header{
@@ -115,13 +115,6 @@ header {
   }
 
 /* HEADER RESPONSIVO */
-.mobile-header {
-  display: none;
-}
-.menu-lateral{
-  display: none;
-}
-
 @media(max-width: 400px){
   .mobile-header {
     display: flex;
@@ -193,5 +186,3 @@ header {
     display: none;
   }
 }
-
-  

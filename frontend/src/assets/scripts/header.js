@@ -5,7 +5,7 @@ const overlay = document.getElementById('overlay');
 hamburger.addEventListener('click', () => {
     menuLateral.style.left = '0';
     overlay.style.display = 'block';
-    overlay.style.remove.display = 'none';
+    
 });
       
 overlay.addEventListener('click', () => {
