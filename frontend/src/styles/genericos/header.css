@@ -86,6 +86,10 @@ header {
     color: var(--color1);
     cursor: pointer;
 }
+
+.mobile-header {
+  display: none;
+}
   
 @media (max-width: 400px) {
     header{
