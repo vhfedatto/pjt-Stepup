@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --corPrincipal: #EF233C;
+    --textoHeader: #600b30;
+    --cor1: #ccc;
+    --cor2: #333;
+
+    --corBotaoLog: #FFB74D;
+    --corBotaoSig: #8D99AE;
+
+    --corBotaoLogHover: #df982d;
+    --corBotaoSigHover: #6f798c;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../../public/images/fundo-login.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Inter", sans-serif;
+    background-color: #ffbb99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    padding: 20px;
+}
+
+h1{
+    margin: 20px 0px 5px 0px;
+    text-align: center;
+}
+
+.login-container{
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 650px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container{
+    background-color: var(--corPrincipal);
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.voltar{
+    background-color: var(--corPrincipal);
+    padding: 0px 10px 10px 15px;
+}
+.voltar img{
+    width: 30px;
+}
+
+.logo-container img{
+    width: 100px;
+}
+
+form{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+}
+
+/*Inputs*/
+input[type="text"],
+input[type="password"],
+.input-group input,
+.input-group select{
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+    margin:7.5px 0px 7.5px 0px;
+    padding-left: 12px;
+}
+
+input:focus {
+    border: 2px solid;
+    border-color: #FFA618;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-senha,
+.input-group label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.label-senha{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.pas-container {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.pas-container button {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.pas-container img {
+    width: 24px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.pas-container button:hover img {
+    opacity: 1;
+}
+
+/*Botões*/
+.btn{
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.144);
+}
+
+#btn-create{
+    margin-top: 10px;
+    background-color: var(--corBotaoLog);
+}
+
+#btn-create:hover{
+    background-color: var(--corBotaoLogHover);
+    transition: color 0.5s ease;
+}
+
+#btn-limpar{
+    background-color: #d12035;
+}
+
+#btn-limpar:hover{
+    background-color: #b41c2e;
+    transition: color 0.5s ease;
+}
+
+/*Rodapé*/
+.redes-sociais {
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.redes-sociais h3 {
+    margin-bottom: 10px;
+}
+
+.redes-sociais a img {
+    height: 36px;
+    margin: 0 5px;
+    opacity: 0.7;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.redes-sociais a:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.redes-sociais > hr {
+    border: none;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+.redes-sociais > .copyright {
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+/*Seletor Atleta / Profissional*/
+
+.user-type-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.user-type-btn {
+    font-size: 18px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #DDDDDD;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.user-type-btn.active {
+    background-color: #FFA618;
+    color: white;
+}
+
+/*Escondido*/
+.hidden {
+  display: none;
+}

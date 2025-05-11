@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --corPrincipal: #EF233C;
+    --textoHeader: #600b30;
+    --cor1: #ccc;
+    --cor2: #333;
+
+    --corBotaoLog: #FFB74D;
+    --corBotaoSig: #8D99AE;
+
+    --corBotaoLogHover: #df982d;
+    --corBotaoSigHover: #6f798c;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../../public/images/fundo-login.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Inter", sans-serif;
+    background-color: #ffbb99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+h1{
+    margin: 20px 0px 5px 0px;
+    text-align: center;
+}
+
+.login-container{
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container{
+    background-color: var(--corPrincipal);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img{
+    width: 100px;
+}
+
+form{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+}
+
+/*Inputs*/
+input[type="text"],
+input[type="password"] {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+}
+
+input:focus {
+    border: 2px solid;
+    border-color: #FFA618;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.pas-container {
+    position: relative;
+}
+
+.pas-container button {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.pas-container img {
+    width: 24px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.pas-container button:hover img {
+    opacity: 1;
+}
+
+/*Switch*/
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--cor1);
+    border-radius: 24px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+    background-color: var(--corPrincipal);
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+.forgot-password {
+    color: var(--corPrincipal);
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/*Botões*/
+.btn{
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.144);
+}
+
+#btn-login{
+    margin-top: 10px;
+    background-color: var(--corBotaoLog);
+}
+
+#btn-sign{
+    background-color: var(--corBotaoSig);
+}
+
+#btn-login:hover{
+    background-color: var(--corBotaoLogHover);
+    transition: color 0.5s ease;
+}
+
+#btn-sign:hover{
+    background-color: var(--corBotaoSigHover);
+    transition: color 0.2s ease;
+}
+
+
+/*Rodapé*/
+.redes-sociais {
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.redes-sociais h3 {
+    margin-bottom: 10px;
+}
+
+.redes-sociais a img {
+    height: 36px;
+    margin: 0 5px;
+    opacity: 0.7;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.redes-sociais a:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.redes-sociais > hr {
+    border: none;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+.redes-sociais > .copyright {
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
