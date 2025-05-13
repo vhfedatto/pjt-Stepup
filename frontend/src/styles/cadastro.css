@@ -241,3 +241,7 @@ input:focus {
 .hidden {
   display: none;
 }
+
+input[type="checkbox"]{
+    margin-top: 20px;
+}

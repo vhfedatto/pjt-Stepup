@@ -57,6 +57,7 @@
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="emailAtleta" name="email" required placeholder="E-mail">
+                    <p style="color: #888888; margin-bottom: 10px;">*<i>o email não pode ser editado após o cadastro</i></p>
                 </div>
 
                 <label for="senhaAtleta" class="label-senha">Senha</label>
@@ -91,12 +92,18 @@
                     <select id="profissao" name="profissao" required>
                         <option value="personal">Personal Trainer</option>
                         <option value="nutricionista">Nutricionista</option>
+                        <option value="ambos">Personal e Nutricionista</option>
                     </select>
                 </div>
 
                 <div class="input-group">
                     <label for="registro">Registro de Profissional</label>
                     <input type="text" id="registro" name="registro" required placeholder="Registro (CREF ou CRN)">
+                </div>
+
+                <div class="input-group">
+                    <label for="registro">Registro de Profissional (Opcional)</label>
+                    <input type="text" id="registro2" name="registro2" placeholder="Registro Secundário (CREF ou CRN)">
                 </div>
 
                 <div class="input-group">
@@ -107,6 +114,7 @@
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="emailProfissional" name="email" required placeholder="exemplo@email.com">
+                    <p style="color: #888888; margin-bottom: 10px;">*<i>o email não pode ser editado após o cadastro</i></p>
                 </div>
                 
                 <label for="senhaProfissional" class="label-senha">Senha</label>
