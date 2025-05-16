@@ -1,25 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil do Usuário</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      padding: 24px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 16px;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: #ccc;
+      background-image: url('https://via.placeholder.com/90');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .username {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .subinfo {
+      color: #666;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .section h2 {
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info-item {
+      background-color: #f1f3f6;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .info-item strong {
+      display: block;
+      font-size: 0.85em;
+      color: #888;
+    }
+
+    .info-item span {
+      font-size: 1em;
+      color: #333;
+    }
+
+    .actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      font-size: 0.95em;
+    }
+
+    .btn.secondary {
+      background-color: #6c757d;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="../frontend/public/images/logo/stepup-logoPequena.png" alt="logo-site" id="logo">
-        <nav>
-            <ul class="menu">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="nutricao.html">Nutrição</a></li>
-                <li><a href="treinos.html">Treinos</a></li>
-                <li><a href="help.html">Ajuda</a></li>
-            </ul>
-        </nav>
-        <a href="perfil.html" id="perfil-icon"><img src="../../public/images/redes-sociais/instagram.png" alt="perfil"></a>
-        <!--Tirar esse "a" pois ele aumenta em 4 px o tamanho da imagem e tira ela de alinhamento-->
+  <div class="container">
+    <div class="header">
+      <div class="avatar"></div>
+      <div>
+        <div class="username">Victor Fedatto</div>
+        <div class="subinfo">@victorhugof</div>
+      </div>
+    </div>
 
-    </header>
+    <div class="section">
+      <h2>Informações Pessoais</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Gênero</strong>
+          <span>Masculino</span>
+        </div>
+        <div class="info-item">
+          <strong>Data de nascimento</strong>
+          <span>25/10/2000</span>
+        </div>
+        <div class="info-item">
+          <strong>Email</strong>
+          <span>victor@example.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Resumo Físico</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Altura</strong>
+          <span>1,70 m</span>
+        </div>
+        <div class="info-item">
+          <strong>Peso atual</strong>
+          <span>68 kg</span>
+        </div>
+        <div class="info-item">
+          <strong>Objetivo</strong>
+          <span>Hipertrofia</span>
+        </div>
+        <div class="info-item">
+          <strong>Nível de atividade</strong>
+          <span>Moderado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn">Editar Perfil</button>
+      <button class="btn">Ver Ficha Completa</button>
+      <button class="btn secondary">Sair</button>
+    </div>
+  </div>
 </body>
 </html>
