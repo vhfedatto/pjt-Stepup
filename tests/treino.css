@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+header {
+  background-color: #d32f2f;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.treino-section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.treino-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.treino-section p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.treino-categorias {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+.card-treino {
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  padding: 40px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card-treino:hover {
+  transform: translateY(-5px);
+}
+
+.card-treino h3 {
+  font-size: 28px;
+  color: #d32f2f;
+  margin-bottom: 20px;
+}
+
+.card-treino p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.card-treino button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-treino button:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer .socials i {
+  margin: 0 10px;
+}
+
+footer .links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+footer .column {
+  max-width: 200px;
+  margin: 10px;
+}
