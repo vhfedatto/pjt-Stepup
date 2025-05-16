@@ -11,12 +11,26 @@
     --corBolasWidget: #A8A4BA;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d4d4d4;;
+}
+main{
+    max-width: 2100px;
+    margin: auto;
+    background-color: var(--corBranco);
+}
+
 .container-cinza {
     max-width: 100%;
     margin: auto;
     padding: 20px 50px 20px 50px;
     background-color: var(--corFundo1);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.219);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.219);
     box-sizing: border-box;
 }
 

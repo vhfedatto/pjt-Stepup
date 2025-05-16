@@ -6,7 +6,6 @@
     <title>StepUp | Home</title>
 
     <!--Folhas de estilo-->
-    <link rel="stylesheet" href="../styles/genericos/header.css">
     <link rel="stylesheet" href="../styles/anamnese.css">
     <link rel="stylesheet" href="../styles/genericos/checkboxes.css">
     <link rel="stylesheet" href="../styles/genericos/footer.css">
@@ -14,45 +13,11 @@
     <!--FavIcon-->
     <link rel="shortcut icon" href="../../public/images/fav/favicon.ico" type="image/x-icon">
 
-    <style>
-        .hidden{
-            display: none;
-        }
-    </style>
-
 </head>
 
 <body>
     <header>
         <img src="../../public/images/logo/stepup-logoPequena.png" alt="logo-site" id="logo">
-        <nav>
-            <ul class="menu">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="nutricao.html">Nutrição</a></li>
-                <li><a href="treinos.html">Treinos</a></li>
-                <li><a href="help.html">Ajuda</a></li>
-            </ul>
-        </nav>
-        <a href="perfil.html"><img src="" alt="perfil"></a>
-    </header>
-    <header class="mobile-header">
-        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">☰</button>
-      
-        <img src="../../../public/images/logo/stepup-logoPequena.png" alt="Logo Site" id="logo">
-      
-        <a href="perfil.html" id="perfil-icon">
-          <img src="../../../public/images/redes-sociais/instagram.png" alt="perfil">
-        </a>
-              <!-- Menu lateral -->
-        <nav class="menu-lateral" id="menu-lateral">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="nutricao.html">Nutrição</a></li>
-                <li><a href="treinos.html">Treinos</a></li>
-                <li><a href="help.html">Ajuda</a></li>
-            </ul>
-        </nav>
-        <div class="overlay" id="overlay"></div>
     </header>
 
     <main>
@@ -61,129 +26,156 @@
                 <h4>Vamos fazer a sua</h4>
                 <h2>Anamnese</h2>
             </div>
-            <hr>
+            <hr class="hr-titulo">
 
-            <a href="">Contrato (clique aqui)</a>
+            <a href="" class="link"><img src="../../public/images/file-text.svg" alt="file-icon" id="img-doc">Contrato (clique aqui)</a>
 
-            <form>
+            <form id="form-anamnese">
                 <div class="questao-anamnese">
                     <label for="profissao" class="questao-titulo">Profissão</label>
-                    <input type="text" class="profissao" placeholder="ex: professor, médico">
+                    <input type="text" class="profissao" id="profissao" name="profissao" placeholder="ex: professor, médico">
                 </div>
     
                 <div class="questao-anamnese">
                     <label for="number" class="questao-titulo">Altura</label>
-                    <input type="number" class="altura" placeholder="ex: 170cm">
+                    <input type="number" class="altura" id="altura" name="altura" placeholder="ex: 170cm">
                 </div>
     
                 <div class="questao-anamnese">
                     <label for="peso" class="questao-titulo">Peso</label>
-                    <input type="number" class="peso" placeholder="ex: 50kg">
+                    <input type="number" class="peso" id="peso" name="peso" placeholder="ex: 50kg">
                 </div>
     
     
                 <div class="questao-anamnese">
                     <label for="fumar" class="questao-titulo">Hábito de fumar?</label>
-                    <input type="radio" name="fumar" class="yes" id="yes1" value="yes-fumar">
-                    <label for="yes1">Sim</label>
-                    <input type="radio" name="fumar" class="no" id="no1" value="no-fumar">
-                    <label for="no1">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="fumar" class="yes" id="yes1" value="yes-fumar">
+                        <label for="yes1">Sim</label>
+                        <input type="radio" name="fumar" class="no" id="no1" value="no-fumar">
+                        <label for="no1">Não</label>
+                    </div>
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="beber" class="questao-titulo">Hábito de beber?</label>
-                    <input type="radio" name="beber" class="yes" id="yes2" value="yes-beber">
-                    <label for="yes2">Sim</label>
-                    <input type="radio" name="beber" class="no" id="no2" value="no-beber">
-                    <label for="no2">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="beber" class="yes" id="yes2" value="yes-beber">
+                        <label for="yes2">Sim</label>
+                        <input type="radio" name="beber" class="no" id="no2" value="no-beber">
+                        <label for="no2">Não</label>
+                    </div>
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="medicacao" class="questao-titulo">Medicação em uso?</label>
-                    <input type="radio" name="medicacao" class="yes" id="yes3" value="yes-medicacao">
-                    <label for="yes3">Sim</label>
-                    <input type="radio" name="medicacao" class="no" id="no3" value="no-medicacao">
-                    <label for="no3">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="medicacao" class="yes" id="yes3" value="yes-medicacao">
+                        <label for="yes3">Sim</label>
+                        <input type="radio" name="medicacao" class="no" id="no3" value="no-medicacao">
+                        <label for="no3">Não</label>
+                    </div>
     
                     <input type="text" class="medicacao-tipo hidden" placeholder="Qual medicação você toma?">
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
-                    <label for="atv-fis" class="questao-titulo">Prática de atividade física?</label>
-                    <input type="radio" name="atv-fis" class="yes" id="yes4" value="yes-atv-fis">
-                    <label for="yes4">Sim</label>
-                    <input type="radio" name="atv-fis" class="no" id="no4" value="no-atv-fis">
-                    <label for="no4">Não</label>
+                    <label for="atv-fis" class="questao-titulo">Pratica atividade física?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="atv-fis" class="yes" id="yes4" value="yes-atv-fis">
+                        <label for="yes4">Sim</label>
+                        <input type="radio" name="atv-fis" class="no" id="no4" value="no-atv-fis">
+                        <label for="no4">Não</label>
+                    </div>
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="dores" class="questao-titulo">Sente dor no peito ou tontura durante esforço físico?</label>
-                    <input type="radio" name="dores" class="yes" id="yes5" value="yes-dores">
-                    <label for="yes5">Sim</label>
-                    <input type="radio" name="dores" class="no" id="no5" value="no-dores">
-                    <label for="no5">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="dores" class="yes" id="yes5" value="yes-dores">
+                        <label for="yes5">Sim</label>
+                        <input type="radio" name="dores" class="no" id="no5" value="no-dores">
+                        <label for="no5">Não</label>
+                    </div>
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="colesterol" class="questao-titulo">Colesterol alto ou alterado?</label>
-                    <input type="radio" name="colesterol" class="yes" id="yes6" value="yes-colesterol">
-                    <label for="yes6">Sim</label>
-                    <input type="radio" name="colesterol" class="no" id="no6" value="no-colesterol">
-                    <label for="no6">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="colesterol" class="yes" id="yes6" value="yes-colesterol">
+                        <label for="yes6">Sim</label>
+                        <input type="radio" name="colesterol" class="no" id="no6" value="no-colesterol">
+                        <label for="no6">Não</label>
+                    </div>
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="hiper" class="questao-titulo">Hipertensão?</label>
-                    <input type="radio" name="hiper" class="yes" id="yes7" value="yes-hiper">
-                    <label for="yes7">Sim</label>
-                    <input type="radio" name="hiper" class="no" id="no7" value="no-hiper">
-                    <label for="no7">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="hiper" class="yes" id="yes7" value="yes-hiper">
+                        <label for="yes7">Sim</label>
+                        <input type="radio" name="hiper" class="no" id="no7" value="no-hiper">
+                        <label for="no7">Não</label>
+                    </div>
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="doencas" class="questao-titulo">Presença de doenças?</label>
-                    <input type="radio" name="doencas" class="yes" id="yes8" value="yes-doencas">
-                    <label for="yes8">Sim</label>
-                    <input type="radio" name="doencas" class="no" id="no8" value="no-doencas">
-                    <label for="no8">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="doencas" class="yes" id="yes8" value="yes-doencas">
+                        <label for="yes8">Sim</label>
+                        <input type="radio" name="doencas" class="no" id="no8" value="no-doencas">
+                        <label for="no8">Não</label>
+                    </div>
                     <input type="text" class="doenca-tipo hidden" placeholder="Qual(is) doença(s) você tem?">
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="problema-osseo" class="questao-titulo">Algum problema ósseo ou articular que lhe impeça de realizar exercícios físicos?</label>
-                    <input type="radio" name="problema-osseo" class="yes" id="yes9" value="yes-problema-osseo">
-                    <label for="yes9">Sim</label>
-                    <input type="radio" name="problema-osseo" class="no" id="no9" value="no-problema-osseo">
-                    <label for="no9">Não</label>
+                    <div class="radio-group">
+                        <input type="radio" name="problema-osseo" class="yes" id="yes9" value="yes-problema-osseo">
+                        <label for="yes9">Sim</label>
+                        <input type="radio" name="problema-osseo" class="no" id="no9" value="no-problema-osseo">
+                        <label for="no9">Não</label>
+                    </div>
                 </div>
+
                 <hr class="divisor">
     
                 <div class="questao-anamnese">
                     <label for="dorme-horas" class="questao-titulo">Dorme quantas horas por noite?</label>
-                    <input type="radio" name="dorme-horas" class="insonia" id="insonia" value="insonia-dorme-horas">
-                    <label for="insonia">Insonia</label>
-                    <input type="radio" name="dorme-horas" class="quatroCinco" id="quatroCinco" value="quatroCinco-dorme-horas">
-                    <label for="quatroCinco">4 a 5 horas</label>
-    
-                    <input type="radio" name="dorme-horas" class="cincoSeis" id="cincoSeis" value="cincoSeis-dorme-horas">
-                    <label for="cincoSeis">5 a 6 horas</label>
-    
-                    <input type="radio" name="dorme-horas" class="seteOito" id="seteOito" value="seteOito-dorme-horas">
-                    <label for="seteOito">7 a 8 horas</label>
-    
-                    <input type="radio" name="dorme-horas" class="noveMais" id="noveMais" value="noveMais-dorme-horas">
-                    <label for="noveMais">mais de 9 horas</label>
+                    <div class="radio-group">
+                        <input type="radio" name="dorme-horas" class="insonia" id="insonia" value="insonia-dorme-horas">
+                        <label for="insonia">Insonia</label>
+                        <input type="radio" name="dorme-horas" class="quatroCinco" id="quatroCinco" value="quatroCinco-dorme-horas">
+                        <label for="quatroCinco">4 a 5 horas</label>
+                        <input type="radio" name="dorme-horas" class="cincoSeis" id="cincoSeis" value="cincoSeis-dorme-horas">
+                        <label for="cincoSeis">5 a 6 horas</label>
+                        <input type="radio" name="dorme-horas" class="seteOito" id="seteOito" value="seteOito-dorme-horas">
+                        <label for="seteOito">7 a 8 horas</label>
+                        <input type="radio" name="dorme-horas" class="noveMais" id="noveMais" value="noveMais-dorme-horas">
+                        <label for="noveMais">mais de 9 horas</label>
+                    </div>
                 </div>
-    
-                <input type="submit" value="Enviar">
+
+                <button type="submit" id="btn-enviar">Enviar</button>
+                <a href="home.html">Pagina principal</a>
             </form>
         </div>
     </main>
@@ -279,6 +271,14 @@
     </footer>
 
     <script src="../assets/scripts/anamnese.js"></script>
+
+    <script>
+        document.getElementById("form-anamnese").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            alert("Dados enviados");
+            window.location.href = "home.html";
+        });
+    </script>
     
 </body>
 </html>

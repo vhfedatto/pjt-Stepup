@@ -4,47 +4,62 @@
 :root{
     --corPrincipal: #EF233C;
     --textoHeader: #600b30;
+        --corHeader: #d42c31;
 
 }
 
-/* Reset simples */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 main {
-  background-color: #fff5f6;
-  padding: 3rem 1rem;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  color: #2B2D42;
+    background-color: #fff5f6;
+    padding: 3rem 1rem;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #2B2D42;
 }
 
+/*Estilização do Header específico*/
+header {
+    background-color: var(--corHeader);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+}
+
+#logo{
+    width: clamp(5rem, 11vw, 6rem);
+}
+
+
+/*Específico da página*/
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .titulo h4 {
-  font-size: 1.1rem;
-  color: #EF233C;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: #EF233C;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .titulo h2 {
-  font-size: 2rem;
-  margin: 0.2rem 0 1.5rem;
-  color: #2B2D42;
+    font-size: 2rem;
+    margin: 0.2rem 0 1.5rem;
+    color: #2B2D42;
 }
 
-hr {
+.hr-titulo {
     border: none;
     height: 2px;
     background: linear-gradient(to right, #EF233C, #ff8a91);
@@ -60,97 +75,168 @@ hr {
     margin-bottom: 0px;
 }
 
-a {
-  display: inline-block;
-  margin-bottom: 2rem;
-  color: #EF233C;
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
+#img-doc{
+    width: 20px;
+    margin-right: 5px;
 }
 
-a:hover {
-  border-color: #EF233C;
+.link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #EF233C;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.link:hover {
+    border-color: #EF233C;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .questao-anamnese {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .questao-titulo{
-  font-weight: 600;
-  color: #2B2D42;
+    font-weight: 600;
+    color: #2B2D42;
 }
 
 .questao-anamnese input[type="text"],
 .questao-anamnese input[type="number"] {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  transition: border-color 0.3s ease;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
 }
 
 .questao-anamnese input[type="text"]:focus,
 .questao-anamnese input[type="number"]:focus {
-  border-color: #EF233C;
-  outline: none;
+    border-color: #EF233C;
+    outline: none;
 }
 
 .questao-anamnese input[type="radio"] {
-  margin-right: 0.4rem;
-  accent-color: #EF233C;
+    margin-right: 0.4rem;
+    accent-color: #EF233C;
 }
 
 .questao-anamnese .hidden {
-  display: none;
+    display: none;
 }
 
-input[type="submit"] {
-  align-self: flex-end;
-  background-color: #EF233C;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 1rem;
+.medicacao-tipo, .doenca-tipo{
+    margin-top: 15px;
 }
 
-input[type="submit"]:hover {
-  background-color: #d61f34;
-  transform: translateY(-2px);
+#btn-enviar{
+    align-self: flex-end;
+    background-color: #EF233C;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
 }
 
+#btn-enviar:hover {
+    background-color: #d61f34;
+    transform: translateY(-2px);
+}
 
 /* Scrollbar personalizada */
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #00000000;
-  border-radius: 8px;
+    background: #00000000;
+    border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #EF233C;
-  border-radius: 8px;
+    background: #EF233C;
+    border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D92035;
+    background: #D92035;
 }
 
 
+
+/* Agrupamento de radios */
+.questao-anamnese input[type="radio"] {
+    display: none;
+}
+
+.questao-anamnese label[for^="yes"],
+.questao-anamnese label[for^="no"],
+.questao-anamnese label[for="insonia"],
+.questao-anamnese label[for="quatroCinco"],
+.questao-anamnese label[for="cincoSeis"],
+.questao-anamnese label[for="seteOito"],
+.questao-anamnese label[for="noveMais"] {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* Círculo personalizado */
+.radio-group label::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* Quando estiver selecionado */
+.radio-group input[type="radio"]:checked + label::before {
+    background-color: var(--corPrincipal);
+    border-color: var(--corPrincipal);
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+/* Realce no label selecionado */
+.radio-group input[type="radio"]:checked + label {
+    border-color: var(--corPrincipal);
+    background-color: #ffe9ec;
+}
+
+/* Alinhamento dos grupos */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-group label {
+    margin: 0;
+    user-select: none;
+}

@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StepUp | Cadastro</title>
 
-    <link rel="stylesheet" href="../styles/cadastro.css">
-    <link rel="stylesheet" href="../styles/genericos/checkboxes.css">
+    <link rel="stylesheet" href="../../styles/cadastro.css">
+    <link rel="stylesheet" href="../../styles/genericos/checkboxes.css">
 
     <!--FavIcon-->
-    <link rel="shortcut icon" href="../../public/images/fav/favicon.ico" type="image/x-icon">
-
-
-
+    <link rel="shortcut icon" href="../../../public/images/fav/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <main class="login-container">
         <div class="logo-container">
-            <div class="logo"><img src="../../public/images/logo/stepup-logoPequena.png" alt="logo-StepUp"></div>
+            <div class="logo"><img src="../../../public/images/logo/stepup-logoPequena.png" alt="logo-StepUp"></div>
         </div>
-        <div class="voltar"><a href="login.html"><img src="../../public/images/seta-direita.png" alt="seta-voltar"></a></div>
+        <div class="voltar"><a href="login.html"><img src="../../../public/images/seta-direita.png" alt="seta-voltar"></a></div>
         
         <h1>Crie sua conta!</h1>
 
@@ -31,18 +28,27 @@
 
             <!-- Campos comuns -->
             <div class="input-group">
-                <label for="nome">Digite o seu nome</label>
-                <input type="text" id="nome" name="nome" required placeholder="Nome completo">
+                <label for="nome">Digite o seu nome</label><!--<span style="color: red;">*</span>-->
+                <input type="text" id="nome" name="nome" placeholder="Nome completo">
 
                 <label for="nome">Usuário</label>
-                <input type="text" id="usernome" name="usernomenome" required placeholder="Nome de Usuário">
+                <input type="text" id="usernome" name="usernomenome" placeholder="Nome de Usuário">
             
                     <label for="genero">Selecione o seu gênero</label>
-                    <select id="genero" name="genero" required>
+                    <select id="genero" name="genero">
                         <option value="masculino">Masculino</option>
                         <option value="faminino">Feminino</option>
                         <option value="x1">Elicóptero de batalha 3d</option>
                         <option value="x2">Elicóptero de batalha 2d</option>
+                        <option value="x3">Transformers</option>
+                        <option value="x4">Tralaleiro tralala</option>
+                        <option value="x5">Mãe de bebê reborn</option>
+                        <option value="x6">Ovelha</option>
+                        <option value="x7">Bombardino crocodilo</option>
+                        <option value="x8">Trans-atleta</option>
+                        <option value="x9">Honda Civic</option>
+                        <option value="x10">Body Builder</option>
+                        <option value="x11">CLT</option>
                     </select>
             </div>
 
@@ -51,32 +57,32 @@
             <div id="athleteFields">
                 <div class="input-group">
                     <label for="dataNascimento" style="margin-top: -8px;">Data de nascimento</label>
-                    <input type="date" id="dataNascimento" name="dataNascimento" required placeholder="Data de nascimento">
+                    <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento">
                 </div>
 
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="emailAtleta" name="email" required placeholder="E-mail">
+                    <input type="email" id="emailAtleta" name="email" placeholder="E-mail">
                     <p style="color: #888888; margin-bottom: 10px;">*<i>o email não pode ser editado após o cadastro</i></p>
                 </div>
 
                 <label for="senhaAtleta" class="label-senha">Senha</label>
                 <div class="pas-container">
-                    <input type="password" id="senhaAtleta" name="senha" required placeholder="Crie uma senha">
+                    <input type="password" id="senhaAtleta" name="senha" placeholder="Crie uma senha">
                     <button type="button" onclick="toggleSenha('senhaAtleta', 'imgOlhoAtleta')">
-                        <img src="../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoAtleta"/>
+                        <img src="../../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoAtleta"/>
                     </button>
                 </div>
                 
                 <label for="confirmarSenhaAtleta" class="label-senha">Confirmação de Senha</label>
                 <div class="pas-container">
-                    <input type="password" id="confirmarSenhaAtleta" name="confirmarSenha" required placeholder="Confirme a senha">
+                    <input type="password" id="confirmarSenhaAtleta" name="confirmarSenha" placeholder="Confirme a senha">
                     <button type="button" onclick="toggleSenha('confirmarSenhaAtleta', 'imgOlhoAtletaConf')">
-                        <img src="../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoAtletaConf"/>
+                        <img src="../../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoAtletaConf"/>
                     </button>
                 </div>
 
-                <input type="checkbox" required> Aceito os <a href="#">Termos de Uso</a>
+                <input type="checkbox"> Aceito os <a href="#">Termos de Uso</a>
 
             </div>
 
@@ -84,12 +90,12 @@
             <div id="professionalFields" style="display: none;">
                 <div class="input-group">
                     <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" name="cpf" required placeholder="CPF">
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF">
                 </div>
 
                 <div class="input-group">
                     <label for="profissao">Selecione sua profissão</label>
-                    <select id="profissao" name="profissao" required>
+                    <select id="profissao" name="profissao">
                         <option value="personal">Personal Trainer</option>
                         <option value="nutricionista">Nutricionista</option>
                         <option value="ambos">Personal e Nutricionista</option>
@@ -98,7 +104,7 @@
 
                 <div class="input-group">
                     <label for="registro">Registro de Profissional</label>
-                    <input type="text" id="registro" name="registro" required placeholder="Registro (CREF ou CRN)">
+                    <input type="text" id="registro" name="registro" placeholder="Registro (CREF ou CRN)">
                 </div>
 
                 <div class="input-group">
@@ -108,45 +114,48 @@
 
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
                 </div>
 
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="emailProfissional" name="email" required placeholder="exemplo@email.com">
+                    <input type="email" id="emailProfissional" name="email" placeholder="exemplo@email.com">
                     <p style="color: #888888; margin-bottom: 10px;">*<i>o email não pode ser editado após o cadastro</i></p>
                 </div>
                 
                 <label for="senhaProfissional" class="label-senha">Senha</label>
                 <div class="pas-container">
-                    <input type="password" id="senhaProfissional" name="senha" required placeholder="Crie uma senha">
+                    <input type="password" id="senhaProfissional" name="senha" placeholder="Crie uma senha">
                     <button type="button" onclick="toggleSenha('senhaProfissional', 'imgOlhoProfissional')">
-                        <img src="../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoProfissional"/>
+                        <img src="../../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoProfissional"/>
                     </button>
                 </div>
                 
                 <label for="confirmarSenhaProfissional" class="label-senha">Confirmação de Senha</label>
                 <div class="pas-container">
-                    <input type="password" id="confirmarSenhaProfissional" name="confirmarSenha" required placeholder="Confirme a senha">
+                    <input type="password" id="confirmarSenhaProfissional" name="confirmarSenha" placeholder="Confirme a senha">
                     <button type="button" onclick="toggleSenha('confirmarSenhaProfissional', 'imgOlhoConf')">
-                        <img src="../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoConf"/>
+                        <img src="../../../public/images/olho-fechado.png" alt="Mostrar senha" id="imgOlhoConf"/>
                     </button>
                 </div>
 
-                <input type="checkbox" required> Aceito os <a href="#">Termos de Uso</a>
+                <label>
+                    <input type="checkbox"> Aceito os <a href="#">Termos de Uso</a>
+                </label>
 
             </div>
-            <button type="submit" class="btn" id="btn-create">Criar</button>
+
+            <button class="btn" id="btn-create" onclick="cadastrar()">Criar</button>
             <button type="reset" class="btn" id="btn-limpar">Limpar</button>
         </form>
 
         <div class="redes-sociais">
             <h3>Siga-nos</h3>
-            <a href=""><img src="../../public/images/redes-sociais/tiktok.png" alt="TikTok"></a>
-            <a href=""><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
-            <a href="https://github.com/vhfedatto/projeto-personal-trainer" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
-            <a href=""><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
-            <a href=""><img src="../../public/images/redes-sociais/youtube.png" alt="YouTube"></a>
+            <a href=""><img src="../../../public/images/redes-sociais/tiktok.png" alt="TikTok"></a>
+            <a href=""><img src="../../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/vhfedatto/projeto-personal-trainer" target="_blank"><img src="../../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+            <a href=""><img src="../../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+            <a href=""><img src="../../../public/images/redes-sociais/youtube.png" alt="YouTube"></a>
             
             <hr>
             
@@ -165,7 +174,11 @@
         rememberToggle.checked = localStorage.getItem("rememberMe") === "true";
     </script>
 
-    <script src="../../src/assets/scripts/genericos/password.js"></script>
-    <script src="../../src/assets/scripts/genericos/atleta-profissional.js"></script>
+    <!-- Adicionar um script para receber os dados e armazenar em um JSON e enviar o usuário para a tela de anamnese -->
+
+    <script src="../../../src/assets/scripts/genericos/password.js"></script>
+    <script src="../../../src/assets/scripts/genericos/atleta-profissional.js"></script>
+
+    <!--<script src="../../../src/assets/scripts/dados-usuario/cadastro-login.js"></script>-->
 </body>
 </html>

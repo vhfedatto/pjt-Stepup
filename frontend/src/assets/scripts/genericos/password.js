@@ -4,9 +4,9 @@ function toggleSenha(inputId, imgId) {
 
     if (senhaInput.type === "password") {
         senhaInput.type = "text";
-        img.src = "../../public/images/olho-aberto.png";
+        img.src = "../../../public/images/olho-aberto.png";
     } else {
         senhaInput.type = "password";
-        img.src = "../../public/images/olho-fechado.png";
+        img.src = "../../../public/images/olho-fechado.png";
     }
 }
