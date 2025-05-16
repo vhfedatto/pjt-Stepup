@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --corPrincipal: #EF233C;
+    --textoHeader: #600b30;
+
+}
+
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #fff5f6;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #2B2D42;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.titulo h4 {
+  font-size: 1.1rem;
+  color: #EF233C;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.titulo h2 {
+  font-size: 2rem;
+  margin: 0.2rem 0 1.5rem;
+  color: #2B2D42;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #EF233C, #ff8a91);
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.divisor{
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #000000, #ff8a91);
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #EF233C;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+a:hover {
+  border-color: #EF233C;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.questao-anamnese {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.questao-titulo{
+  font-weight: 600;
+  color: #2B2D42;
+}
+
+.questao-anamnese input[type="text"],
+.questao-anamnese input[type="number"] {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.questao-anamnese input[type="text"]:focus,
+.questao-anamnese input[type="number"]:focus {
+  border-color: #EF233C;
+  outline: none;
+}
+
+.questao-anamnese input[type="radio"] {
+  margin-right: 0.4rem;
+  accent-color: #EF233C;
+}
+
+.questao-anamnese .hidden {
+  display: none;
+}
+
+input[type="submit"] {
+  align-self: flex-end;
+  background-color: #EF233C;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #d61f34;
+  transform: translateY(-2px);
+}
+
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000000;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EF233C;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D92035;
+}
+
+
