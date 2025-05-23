@@ -18,15 +18,15 @@ Link para documentos:
 * **HTML CSS e JavaScript**
 * **Python** (standby)
 * **Java** (standby)
-* **SQL** (standby)
+* **SQL**
 
 ## Ferramentas utilizadas
 * **Vscode**
 * **GitHub**
 * **Figma**
 * **Whimsical**
-* **DBeaver** (standby)
-* **MySQL** (standby)
+* **DBeaver**
+* **Neon Postgres**
 
 ## Instalação do projeto
 Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
@@ -35,11 +35,11 @@ Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
 * passo 03;
 
 ## **Equipe**
-* Victor H. Fedatto Vasconcelos
-* Kaliel A. Amblard Selhorst 
-* Alisson Rafael Marinho
-* Alexandre B. Cavalcanti Luna
-* Rodrigo Batista de Farias
-* Leonardo Camilo de S. Filho
-* Sérgio Lucas P. Sousa
-* Guilherme dos Santos Barros
+* Victor H. Fedatto Vasconcelos [GitHub](https://github.com/vhfedatto)
+* Kaliel A. Amblard Selhorst [GitHub]([link](https://github.com/Selhorstkaliel))
+* Alisson Rafael Marinho [GitHub]([link](https://github.com/AlissonRafaelDev))
+* Alexandre B. Cavalcanti Luna [GitHub](link)
+* Rodrigo Batista de Farias [GitHub](link)
+* Leonardo Camilo de S. Filho [GitHub](link)
+* Sérgio Lucas P. Sousa [GitHub]([link](https://github.com/SergioLPSousa))
+* Guilherme dos Santos Barros [GitHub]([link](https://github.com/GuilhermeSBS10))
