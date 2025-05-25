@@ -145,7 +145,7 @@
 
             </div>
 
-            <button class="btn" id="btn-create" onclick="cadastrar()">Criar</button>
+            <button type="submit" class="btn" id="btn-create">Criar</button>
             <button type="reset" class="btn" id="btn-limpar">Limpar</button>
         </form>
 
@@ -162,23 +162,11 @@
             <p class="copyright">&copy; 2025 StepUp; Site desenvolvido pela equipe [nome]. Todos os direitos reservados.</p>
         </div>
     </main>
-
-    <script>
-        const rememberToggle = document.getElementById("remember-toggle");
-
-        rememberToggle.addEventListener("change", ()=>{
-            const remember = rememberToggle.checked;
-            localStorage.setItem("rememberMe", remember);
-        });
-
-        rememberToggle.checked = localStorage.getItem("rememberMe") === "true";
-    </script>
-
     <!-- Adicionar um script para receber os dados e armazenar em um JSON e enviar o usuário para a tela de anamnese -->
 
     <script src="../../../src/assets/scripts/genericos/password.js"></script>
     <script src="../../../src/assets/scripts/genericos/atleta-profissional.js"></script>
 
-    <!--<script src="../../../src/assets/scripts/dados-usuario/cadastro-login.js"></script>-->
+    <script src="../../../src/assets/scripts/dados-usuario/cadastro.js"></script>
 </body>
 </html>

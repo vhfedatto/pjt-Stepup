@@ -63,13 +63,17 @@ footer {
 
 .footer-conteudo {
     display: grid; /*Divide a div em 3 colunas*/
-    grid-template-columns: 1fr 1fr 1fr; /* Três colunas fixas */
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: 1fr 1fr 1fr; /* Duas colunas fixas */
+    gap: 40px;
+    margin: 30px auto 0;
     align-items: start;
+    width: 100%;
+    max-width: 1500px; /* Centraliza e limita largura */
+    padding: 0 20px;
 }
 
 .footer-conteudo > div {
+    justify-self: center;
     min-width: 200px;
 }
 
@@ -78,11 +82,11 @@ footer {
     margin-left: 50px;
 }
 
-.help {
+.help{
     justify-self: center; /* Alinha ao centro */
 }
 
-.extra {
+.legal {
     justify-self: end; /* Alinha à direita */
     margin-right: 50px;
 }
@@ -123,15 +127,32 @@ footer {
     opacity: 1;
 }
 
-.help ul li {
+.footer-conteudo a{
+    text-decoration: none;
+}
+
+.help ul li a {
     color: #bbb;
     margin-bottom: 8px;
     cursor: pointer;
 }
 
-.help ul li:hover {
+.help ul li a:hover {
     text-decoration: underline;
     color: #fff;
+    transition: color 0.3s ease;
+}
+
+.legal ul li a{
+    color: #bbb;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.legal ul li a:hover {
+    text-decoration: underline;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
 footer hr {
@@ -154,7 +175,7 @@ footer .copyright {
         text-align: center;
     }
 
-    .devs, .help, .extra {
+    .devs, .help, .legal {
         justify-self: center;
         text-align: center;
     }
