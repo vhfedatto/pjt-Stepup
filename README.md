@@ -36,10 +36,10 @@ Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
 
 ## **Equipe**
 * Victor H. Fedatto Vasconcelos [GitHub](https://github.com/vhfedatto)
-* Kaliel A. Amblard Selhorst [GitHub]([link](https://github.com/Selhorstkaliel))
-* Alisson Rafael Marinho [GitHub]([link](https://github.com/AlissonRafaelDev))
+* Kaliel A. Amblard Selhorst [GitHub](https://github.com/Selhorstkaliel)
+* Alisson Rafael Marinho [GitHub](https://github.com/AlissonRafaelDev)
 * Alexandre B. Cavalcanti Luna [GitHub](link)
 * Rodrigo Batista de Farias [GitHub](link)
 * Leonardo Camilo de S. Filho [GitHub](link)
-* Sérgio Lucas P. Sousa [GitHub]([link](https://github.com/SergioLPSousa))
-* Guilherme dos Santos Barros [GitHub]([link](https://github.com/GuilhermeSBS10))
+* Sérgio Lucas P. Sousa [GitHub](https://github.com/SergioLPSousa)
+* Guilherme dos Santos Barros [GitHub](https://github.com/GuilhermeSBS10)
