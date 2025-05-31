@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepUp | Home</title>
+
+    <!--Folhas de estilo-->
+    <link rel="stylesheet" href="../styles/styleHome.css">
+    <link rel="stylesheet" href="../styles/genericos/footer.css">
+    <link rel="stylesheet" href="../styles/genericos/header.css">
+    <link rel="stylesheet" href="../styles/genericos/checkboxes.css">
+    <link rel="stylesheet" href="../styles/style-personal/homepage_personal.css">
+
+    <!--FavIcon-->
+    <link rel="shortcut icon" href="../../public/images/fav/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <img src="../../public/images/logo/stepup-logoPequena.png" alt="logo-site" id="logo">
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="nutricao.html">Nutrição</a></li>
+                <li><a href="treinos.html">Treinos</a></li>
+                <li><a href="help.html">Ajuda</a></li>
+            </ul>
+        </nav>
+        <a href="perfil.html"><img src="" alt="perfil"></a>
+    </header>
+    
+    
+    <main>
+        <div class="container" >
+            <h1 class="titulo-pagina">Seus Alunos</h1>
+
+            <div class="resumos_alunos">
+                <div class="card_alunos">
+                    <div class="circulo_progresso progresso-76">76%</div>
+                <div class="info_aluno">
+                    <h3>Sérgio L.</h3>
+                </div>
+                </div>
+
+                <div class="card_alunos">
+                    <div class="circulo_progresso progresso-42">42%</div>
+                <div class="info_aluno">
+                    <h3>Victor F.</h3>
+                </div>
+                </div>
+
+            </div>
+
+
+            </div>
+
+            <div class="conteudo_principal">
+                <div class="panel">
+                    <h2>Painel de Acompanhamento</h2>
+                    <select class="seletor_alunos" id="seletorAlunos">
+                        <option value="sergio">Sérgio L</option>
+                        <option value="victor">Victor H.</option>
+                    </select>
+
+                    <div class="metricas" id="container_metricas">
+                        <div class="metrica">
+                            <div class="rotulo_metrica">Calorias</div>
+                            <div class="barra_metrica">
+                                <div class="metrica_cheiacalorias" id="barraCalorias" style="width: 85%;"></div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="metrica">
+                            <div class="rotulo_metrica">Consumo de Água</div>
+                            <div class="barra_metrica">
+                                <div class="metricacheia_agua" id="barraConsumoAgua" style="width: 60%;"></div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="metrica">
+                            <div class="rotulo_metrica">Treinos Realizados</div>
+                            <div class="barra_metrica">
+                                <div class="metricacheia_treinos" id="barraTreinosRealizados" style="width: 75%;"></div>
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="metrica">
+                            <div class="rotulo_metrica">Frequencia Semanal</div>
+                            <div class="barra_metrica">
+                                <div class="metrica_cheiafrequencia" id="barraFrequenciaSemanal" style="width: 90%;"></div>
+                                
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="panel">
+                <h2>Ações Rápidas</h2>
+                <div class="acoes_rapidas">
+                    <button class="action-btn" onclick="editarTreino()">
+                        <div class="action-icon">📝</div>
+                        Editar Treino
+                    </button>
+                    
+                    <button class="action-btn" onclick="editarDieta()">
+                        <div class="action-icon">🍎</div>
+                        Editar Dieta
+                    </button>
+                    
+                    <button class="action-btn" onclick="enviarMotivacao()">
+                        <div class="action-icon">✉️</div>
+                        Enviar sugestão/motivação
+                    </button>
+                    
+                    <button class="action-btn" onclick="agendarReavaliacao()">
+                        <div class="action-icon">📅</div>
+                        Agendar reavaliação
+                    </button>
+                </div>
+            </div>
+
+            </div>
+
+            <script src="../assets/scripts/homepage_personal.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-topo">
+            <img src="../../public/images/logo/stepup-logoPequena.png" alt="logo-site" id="logo-footer">
+        </div>
+        <hr>
+        
+        <div class="redes-sociais">
+            <h3>Siga-nos</h3>
+            <a href=""><img src="../../public/images/redes-sociais/tiktok.png" alt="TikTok"></a>
+            <a href=""><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/vhfedatto/projeto-personal-trainer" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+            <a href=""><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+            <a href=""><img src="../../public/images/redes-sociais/youtube.png" alt="YouTube"></a>
+        </div>
+        
+        <hr>
+        
+        <div class="footer-conteudo">
+            <div class="devs">
+                <h2>Devs</h2>
+                    <ul>
+                        <!-- Para cada dev -->
+                        <li>
+                            <span>Alexandre Luna</span>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <li>
+                            <span>Alisson Rafael</span>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <li>
+                            <span>Guilherme Santos</span>
+                            <a href="https://github.com/GuilhermeSBS10" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="#"target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="#"target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <li>
+                            <span>Kaliel Selhorst</span>
+                            <a href="https://github.com/Selhorstkaliel" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="https://www.instagram.com/selhorstkaliel?igsh=c3Y5YzdvZ2gwcW82" target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="https://www.linkedin.com/in/kaliel-selhorst-3baa12350/" target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <li>
+                            <span>Leonardo Camilo</span>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <li>
+                            <span>Rodrigo Farias</span>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <li>
+                            <span>Sérgio Lucas</span>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <li>
+                            <span>Victor H Fedatto</span>
+                            <a href="https://github.com/vhfedatto" target="_blank"><img src="../../public/images/redes-sociais/github.png" alt="GitHub"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/instagram.png" alt="Instagram"></a>
+                            <a href="#" target="_blank"><img src="../../public/images/redes-sociais/linkedin.png" alt="LinkedIN"></a>
+                        </li>
+                        <!-- Outros devs seguem o mesmo padrão -->
+                    </ul>
+            </div>
+
+            <div class="help">
+                <h2>Ajuda</h2>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Conceito</a></li>
+                    <li><a href="#">Investidores</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Contrato Personal</a></li>
+                </ul>
+            </div>
+
+            <div class="legal">
+                <h2>Informações legais</h2>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">LGPD</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <p class="copyright">&copy; 2025 StepUp; Site desenvolvido pela equipe [nome]. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../assets/scripts/scroll-carousel.js"></script>
+    <script src="../assets/scripts/header.js"></script>
+    <script>
+        function verCardapio(){
+            window.location.href = 'nutricao.html';
+        }
+    </script>
+</body>
+</html>
