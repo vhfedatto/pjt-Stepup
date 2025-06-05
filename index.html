@@ -1,18 +1,142 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StepUp | Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #f44336;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #f44336;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: #ffe9e7;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .feature {
+      border: 1px solid #ddd;
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 300px;
+      text-align: center;
+    }
+
+    .feature img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #f44336;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>StepUp</h1>
-    <h3>Essa página Index é apenas temporária. Para acessar o nosso projeto, por favor, clique no botão abaixo</h3>
-    <p>Isso, clique no botão</p>
+  <header>
+    <h1>Bem-vindo ao StepUp</h1>
+    <p>O futuro do acompanhamento fitness e nutricional</p>
+  </header>
 
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Uma plataforma completa para atletas e profissionais da saúde</h2>
+    <p>Cadastre-se como atleta ou profissional, acompanhe treinos e cardápios personalizados, e evolua com inteligência e suporte.</p>
+  </section>
+
+  <section class="features" id="funcionalidades">
+    <div class="feature">
+      <img src="https://img.icons8.com/color/96/000000/barbell.png" alt="Treinos">
+      <h3>Fichas de Treino</h3>
+      <p>Criação e acompanhamento de treinos individualizados com controle de progresso.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/color/96/000000/salad.png" alt="Nutrição">
+      <h3>Cardápios Personalizados</h3>
+      <p>Profissionais podem montar cardápios estratégicos para cada fase do treino.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/color/96/000000/group.png" alt="Perfis">
+      <h3>Perfis Inteligentes</h3>
+      <p>Áreas distintas para atletas e profissionais, com acesso a dados e interações específicas.</p>
+    </div>
+</section>
+
+<footer id="contato">
+    <p>© 2025 StepUp. Todos os direitos reservados.</p>
     <button><a href="frontend/src/pages/home.html">Home Page</a></button>
     <button><a href="frontend/src/pages/sign-login-pages/login.html">Fazer Login</a></button>
     <button><a href="frontend/src/pages/sign-login-pages/cadastro.html">Sign Up</a></button>
-    
+  </footer>
 </body>
 </html>
