@@ -1,5 +1,12 @@
-<img src="" height="130"/>
-# Projeto Personal Trainer
+<div align="center">
+  <img src="frontend/public/images/logo/stepup-logoPequena.png" height="130"/>
+</div>
+
+<div align="center">
+  
+  # Projeto Personal Trainer (StepUp)
+
+</div>
 
 ## Sobre o projeto
 Um site que permita que o personal organize a dieta dos alunos, veja os dados dos alunos na anamnese e nos treinos individuais, que possa organizar rotinas de treinos para seus alunos fazerem sozinhos, coleta de dados a respeito do desenvolvimento do aluno, apresentação desses dados em forma de gráficos para mostrar progressão etc. Permite também que o usuário complete a sua anamnese, coloque a sua rotina, sua alimentação, veja os treinos e anote suas observações a respeito para acompanhamento remoto por parte do personal etc. 
@@ -16,7 +23,6 @@ Link para documentos:
 
 ## Linguagens utilizadas
 * **HTML CSS e JavaScript**
-* **Python** (standby)
 * **Java** (standby)
 * **SQL**
 
@@ -28,11 +34,11 @@ Link para documentos:
 * **DBeaver**
 * **Neon Postgres**
 
-## Instalação do projeto
+<!--## Instalação do projeto
 Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
 * passo 01;
 * passo 02;
-* passo 03;
+* passo 03;-->
 
 ## **Equipe**
 * Victor H. Fedatto Vasconcelos [GitHub](https://github.com/vhfedatto)
@@ -44,4 +50,9 @@ Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
 * Sérgio Lucas P. Sousa [GitHub](https://github.com/SergioLPSousa)
 * Guilherme dos Santos Barros [GitHub](https://github.com/GuilhermeSBS10)
 
-_Projeto criado para a matéria "Projeto Extensionista" do P2 de Ciência da Computação_
+---
+
+<div align="center">
+  
+  _@2025.1 Projeto criado para a matéria "Projeto Extensionista" do P2 de Ciência da Computação_
+</div>
