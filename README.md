@@ -1,4 +1,4 @@
-# Projeto de Extensão - 2025.1
+<img src="" height="130"/>
 # Projeto Personal Trainer
 
 ## Sobre o projeto
@@ -43,3 +43,5 @@ Nesta sessão, ensinaremos como instalar e utilizar o nosso projeto.
 * Leonardo Camilo de S. Filho [GitHub](link)
 * Sérgio Lucas P. Sousa [GitHub](https://github.com/SergioLPSousa)
 * Guilherme dos Santos Barros [GitHub](https://github.com/GuilhermeSBS10)
+
+_Projeto criado para a matéria "Projeto Extensionista" do P2 de Ciência da Computação_
